@@ -1,0 +1,52 @@
+# ── Secrets ──────────────────────────────────────────────────────
+.env
+.streamlit/secrets.toml
+
+# ── Python ──────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# ── Data outputs (Phase 1 audit artefacts — rebuild with run_refresh.py)
+out/excel_profile.json
+out/excel_profile_summary.json
+out/excel_columns.csv
+out/excel_shapes.csv
+out/inventory.csv
+out/inventory_summary.json
+out/duplicates.csv
+out/disagreements.csv
+out/key_coverage.*
+out/missing.csv
+out/pdf_conformance.json
+out/pdf_records.*
+out/phase1_run.json
+out/phase2_verify.json
+out/phase3_verify.json
+out/phase4_eval.json
+out/verbatims.csv
+out/measure_mapping.csv
+*.duckdb.wal
+
+# NOTE: These runtime files ARE tracked (the app needs them):
+#   out/fis_warehouse.duckdb, out/chunks.json, out/chunk_index.json,
+#   out/chunk_embeddings.npy, out/tfidf_model.pkl, out/measure_dictionary.json
+
+# ── IDE / OS ────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Docker ──────────────────────────────────────────────────────
+docker-compose.override.yml

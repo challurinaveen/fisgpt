@@ -1,0 +1,3577 @@
+{
+  "backend": "tfidf",
+  "embed_dim": 256,
+  "n_chunks": 357,
+  "chunks": [
+    {
+      "idx": 0,
+      "chunk_id": 1,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240517.pdf",
+      "cmr_ref": "240517",
+      "category_name": "SAVOURY BISCUITS / CRACKERS",
+      "test_year": null,
+      "locator": "Jacob's Red Leicester Flavour Bites (Set 26)"
+    },
+    {
+      "idx": 1,
+      "chunk_id": 2,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240524.pdf",
+      "cmr_ref": "240524",
+      "category_name": "AMBIENT RICE & PASTA, NOODLES & GRAINS",
+      "test_year": null,
+      "locator": "Mac 'N' Cheese Head Macaroni & 3 Oozy Cheese (Set 26)"
+    },
+    {
+      "idx": 2,
+      "chunk_id": 3,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240553.pdf",
+      "cmr_ref": "240553",
+      "category_name": "VEGAN MEAT & FISH ALTERNATIVES",
+      "test_year": null,
+      "locator": "Squeaky Bean tofu slices (Set 26)"
+    },
+    {
+      "idx": 3,
+      "chunk_id": 4,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240554.pdf",
+      "cmr_ref": "240554",
+      "category_name": "DAIRY DRINKS",
+      "test_year": null,
+      "locator": "M&S YAY! Vanilla Mushroom Latte with Lions Mane (Set 26)"
+    },
+    {
+      "idx": 4,
+      "chunk_id": 5,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240555.pdf",
+      "cmr_ref": "240555",
+      "category_name": "VEGAN ACCOMPANIMENTS",
+      "test_year": null,
+      "locator": "Plant based Boursin (Set 26)"
+    },
+    {
+      "idx": 5,
+      "chunk_id": 6,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240556.pdf",
+      "cmr_ref": "240556",
+      "category_name": "CEREALS",
+      "test_year": null,
+      "locator": "Bio & Me Good Gut Puffs (Set 26)"
+    },
+    {
+      "idx": 6,
+      "chunk_id": 7,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240559.pdf",
+      "cmr_ref": "240559",
+      "category_name": "VEGAN MEAT & FISH ALTERNATIVES",
+      "test_year": null,
+      "locator": "Quorn Smokey BBQ Filled Bites (Set 26)"
+    },
+    {
+      "idx": 7,
+      "chunk_id": 8,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240560.pdf",
+      "cmr_ref": "240560",
+      "category_name": "ADULT SOFT DRINKS",
+      "test_year": null,
+      "locator": "Coca Cola Zero Sugar Lime (Set 26)"
+    },
+    {
+      "idx": 8,
+      "chunk_id": 9,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240578.pdf",
+      "cmr_ref": "240578",
+      "category_name": "CHILLED FRUIT JUICE DRINKS (RTD)",
+      "test_year": null,
+      "locator": "Tropicana Multivitamin Boost Mixed Berries Juice (Set 26)"
+    },
+    {
+      "idx": 9,
+      "chunk_id": 10,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240579.pdf",
+      "cmr_ref": "240579",
+      "category_name": "HOUMOUS",
+      "test_year": null,
+      "locator": "Moorish Smoked Humous with Chilli Harissa (Set 26)"
+    },
+    {
+      "idx": 10,
+      "chunk_id": 11,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240583.pdf",
+      "cmr_ref": "240583",
+      "category_name": "CREAM",
+      "test_year": null,
+      "locator": "Elmlea Salted Caramel Double Cream Alternative (Set 27)"
+    },
+    {
+      "idx": 11,
+      "chunk_id": 12,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240586.pdf",
+      "cmr_ref": "240586",
+      "category_name": "SWEET FRUIT SNACKS",
+      "test_year": null,
+      "locator": "5th Season Fruit Mango & Raspberry Bites (Set 27)"
+    },
+    {
+      "idx": 12,
+      "chunk_id": 13,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240587.pdf",
+      "cmr_ref": "240587",
+      "category_name": "CHOCOLATE BISCUITS",
+      "test_year": null,
+      "locator": "Thomas J Fudge's Milk Chocolate Florentines (Set 27)"
+    },
+    {
+      "idx": 13,
+      "chunk_id": 14,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240588.pdf",
+      "cmr_ref": "240588",
+      "category_name": "NON POTATO SNACKS",
+      "test_year": null,
+      "locator": "M&S Spanish Chorizo Crisps (Set 27)"
+    },
+    {
+      "idx": 14,
+      "chunk_id": 15,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240590.pdf",
+      "cmr_ref": "240590",
+      "category_name": "INDIVIDUAL CAKES & PASTRIES",
+      "test_year": null,
+      "locator": "Apple and Mango Soreen Bars (Set 27)"
+    },
+    {
+      "idx": 15,
+      "chunk_id": 16,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240591.pdf",
+      "cmr_ref": "240591",
+      "category_name": "SUGAR CONFECTIONARY",
+      "test_year": null,
+      "locator": "Haribo Nostalgix (Set 27)"
+    },
+    {
+      "idx": 16,
+      "chunk_id": 17,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240592.pdf",
+      "cmr_ref": "240592",
+      "category_name": "NON DAIRY MILK DRINKS",
+      "test_year": null,
+      "locator": "Califia Farms Matcha Almond Latte (Set 27)"
+    },
+    {
+      "idx": 17,
+      "chunk_id": 18,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240594.pdf",
+      "cmr_ref": "240594",
+      "category_name": "DAIRY FREE FOOD",
+      "test_year": null,
+      "locator": "Galaxy Dairy Free Hazelnut Praline (Set 27)"
+    },
+    {
+      "idx": 18,
+      "chunk_id": 19,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240595.pdf",
+      "cmr_ref": "240595",
+      "category_name": "CEREALS",
+      "test_year": null,
+      "locator": "Jordans Popped Oat Crunch Chocolate (Set 27)"
+    },
+    {
+      "idx": 19,
+      "chunk_id": 20,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240596.pdf",
+      "cmr_ref": "240596",
+      "category_name": "TRADITIONAL PREPARED SALADS",
+      "test_year": null,
+      "locator": "Florette Japanese Katsu Gourmet Slaw (Set 27)"
+    },
+    {
+      "idx": 20,
+      "chunk_id": 21,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240597.pdf",
+      "cmr_ref": "240597",
+      "category_name": "INDIVIDUAL CAKES & PASTRIES",
+      "test_year": null,
+      "locator": "Mr Kipling Strawberry and Cream Fancies (Set 27)"
+    },
+    {
+      "idx": 21,
+      "chunk_id": 22,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240610.pdf",
+      "cmr_ref": "240610",
+      "category_name": "COLD SAVOURY SNACKS",
+      "test_year": null,
+      "locator": "Mattessons Original Smoked Pork Sausage (Set 27)"
+    },
+    {
+      "idx": 22,
+      "chunk_id": 23,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240611.pdf",
+      "cmr_ref": "240611",
+      "category_name": "NUT BUTTER & SWEET SPREADS",
+      "test_year": null,
+      "locator": "ASDA Cracking Chocolate Spread (Set 28)"
+    },
+    {
+      "idx": 23,
+      "chunk_id": 24,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240627.pdf",
+      "cmr_ref": "240627",
+      "category_name": "SUGAR CONFECTIONARY",
+      "test_year": null,
+      "locator": "Lindt Lindor Original (Set 28)"
+    },
+    {
+      "idx": 24,
+      "chunk_id": 25,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240628.pdf",
+      "cmr_ref": "240628",
+      "category_name": "BAKED BEANS",
+      "test_year": null,
+      "locator": "M&S No added sugar Baked Beans (Set 28)"
+    },
+    {
+      "idx": 25,
+      "chunk_id": 26,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240629.pdf",
+      "cmr_ref": "240629",
+      "category_name": "SAVOURY SPECIALITY BREADS",
+      "test_year": null,
+      "locator": "Jason's Sunflower Seeded Protein Sourdough (Set 28)"
+    },
+    {
+      "idx": 26,
+      "chunk_id": 27,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240630.pdf",
+      "cmr_ref": "240630",
+      "category_name": "SLICED MEATS",
+      "test_year": null,
+      "locator": "M&S British Wafer Thin Smoked Ham (Set 28)"
+    },
+    {
+      "idx": 27,
+      "chunk_id": 28,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240631.pdf",
+      "cmr_ref": "240631",
+      "category_name": "TORTILLA CHIPS",
+      "test_year": null,
+      "locator": "Doritos Minecraft The Creeper Vinegar Flavour Sharing Crisps (Set 28)"
+    },
+    {
+      "idx": 28,
+      "chunk_id": 29,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240632.pdf",
+      "cmr_ref": "240632",
+      "category_name": "COFFEE",
+      "test_year": null,
+      "locator": "Little's Premium Origin Instant Coffee Italian (Set 28)"
+    },
+    {
+      "idx": 29,
+      "chunk_id": 30,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240633.pdf",
+      "cmr_ref": "240633",
+      "category_name": "HOT CHOCOLATE & DAIRY DRINKS",
+      "test_year": null,
+      "locator": "Galaxy Frothy Hot Chocolate (Set 28)"
+    },
+    {
+      "idx": 30,
+      "chunk_id": 31,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240634.pdf",
+      "cmr_ref": "240634",
+      "category_name": "CREAM",
+      "test_year": null,
+      "locator": "M&S Double Cream (Set 28)"
+    },
+    {
+      "idx": 31,
+      "chunk_id": 32,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240635.pdf",
+      "cmr_ref": "240635",
+      "category_name": "CUSTARDS",
+      "test_year": null,
+      "locator": "Sainsbury's Vanilla Custard Taste the Diffrence (Set 28)"
+    },
+    {
+      "idx": 32,
+      "chunk_id": 33,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240636.pdf",
+      "cmr_ref": "240636",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "M&S Lemon Curd Hot Cross Buns (Set 28)"
+    },
+    {
+      "idx": 33,
+      "chunk_id": 34,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240638.pdf",
+      "cmr_ref": "240638",
+      "category_name": "CONFECTIONERY (CHOCOLATE - BLOCK) - MILK",
+      "test_year": null,
+      "locator": "Tony's Chocolonely Milk Chocolate Caramel Sea Salt (Set 28)"
+    },
+    {
+      "idx": 34,
+      "chunk_id": 35,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240585.pdf",
+      "cmr_ref": "240585",
+      "category_name": "CHILLED SOUPS",
+      "test_year": null,
+      "locator": "Nourish Chicken Soup (Set 29)"
+    },
+    {
+      "idx": 35,
+      "chunk_id": 36,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240650.pdf",
+      "cmr_ref": "240650",
+      "category_name": "CONFECTIONERY (CHOCOLATE - BLOCK) - MILK",
+      "test_year": null,
+      "locator": "KitKat Salted Caramel Chocolate Sharing Bar (Set 29)"
+    },
+    {
+      "idx": 36,
+      "chunk_id": 37,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240662.pdf",
+      "cmr_ref": "240662",
+      "category_name": "LOW FAT YOGURTS",
+      "test_year": null,
+      "locator": "Biotiful Kefir Yogurt British Strawberry (Set 29)"
+    },
+    {
+      "idx": 37,
+      "chunk_id": 38,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240671.pdf",
+      "cmr_ref": "240671",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Co-op Irresistible Apple Crumble Hot Cross Buns (Set 29)"
+    },
+    {
+      "idx": 38,
+      "chunk_id": 39,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240672.pdf",
+      "cmr_ref": "240672",
+      "category_name": "CHILLED NON VEGETARIAN PIZZAS",
+      "test_year": null,
+      "locator": "Co-op Limited Edition Irresistible Kashmiri Style Butter Chicken Pizza (Set 29)"
+    },
+    {
+      "idx": 39,
+      "chunk_id": 40,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240676.pdf",
+      "cmr_ref": "240676",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Exceptional by ASDA 4 Tiramisu Hot Cross Buns (Set 29)"
+    },
+    {
+      "idx": 40,
+      "chunk_id": 41,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240677.pdf",
+      "cmr_ref": "240677",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Waitrose Apricot & Stem Ginger Hot Cross Buns (Set 29)"
+    },
+    {
+      "idx": 41,
+      "chunk_id": 42,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240686.pdf",
+      "cmr_ref": "240686",
+      "category_name": "LOW FAT YOGURTS",
+      "test_year": null,
+      "locator": "Onken Biopot Vanilla Yogurt (Set 29)"
+    },
+    {
+      "idx": 42,
+      "chunk_id": 43,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240687.pdf",
+      "cmr_ref": "240687",
+      "category_name": "POTATO SNACKS",
+      "test_year": null,
+      "locator": "Walkers Ready Salted Multipack Crisps 6x25g (Set 29)"
+    },
+    {
+      "idx": 43,
+      "chunk_id": 44,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240696.pdf",
+      "cmr_ref": "240696",
+      "category_name": "NON POTATO SNACKS",
+      "test_year": null,
+      "locator": "Walkers Wotsits Really Cheesy Multipack Snacks (Set 29)"
+    },
+    {
+      "idx": 44,
+      "chunk_id": 45,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240698.pdf",
+      "cmr_ref": "240698",
+      "category_name": "AMBIENT COOKING SAUCES",
+      "test_year": null,
+      "locator": "Wagamama Coconut & Lemongrass Cooking Sauce (Set 29)"
+    },
+    {
+      "idx": 45,
+      "chunk_id": 46,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240699.pdf",
+      "cmr_ref": "240699",
+      "category_name": "BLENDED / FLAVOURED CHEESE",
+      "test_year": null,
+      "locator": "Smug Dairy Slices Blended Oat & Dairy Cheddar (Set 29)"
+    },
+    {
+      "idx": 46,
+      "chunk_id": 47,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240584.pdf",
+      "cmr_ref": "240584",
+      "category_name": "PLAIN PORRIDGE",
+      "test_year": null,
+      "locator": "Ambrosia Ready to Eat Porridge - CINNAMON (Set 31)"
+    },
+    {
+      "idx": 47,
+      "chunk_id": 48,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240682.pdf",
+      "cmr_ref": "240682",
+      "category_name": "SPREADS",
+      "test_year": null,
+      "locator": "Kerrygold Spreadable Butter with Maple and Cinnamon (Set 31)"
+    },
+    {
+      "idx": 48,
+      "chunk_id": 49,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240716.pdf",
+      "cmr_ref": "240716",
+      "category_name": "INDIVIDUAL CAKES & PASTRIES",
+      "test_year": null,
+      "locator": "Nutella Chocolate & Hazelnut Ring Donut (Set 31)"
+    },
+    {
+      "idx": 49,
+      "chunk_id": 50,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240719.pdf",
+      "cmr_ref": "240719",
+      "category_name": "SWEET SNACKS",
+      "test_year": null,
+      "locator": "Go Ahead Cherry Crispy Fruit Slices Snack Bars Multipack (Set 31)"
+    },
+    {
+      "idx": 50,
+      "chunk_id": 51,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240722.pdf",
+      "cmr_ref": "240722",
+      "category_name": "POTATO SNACKS",
+      "test_year": null,
+      "locator": "Walkers Sensations Slow Roasted Pork & Apple Sauce Sharing Crisps (Set 31)"
+    },
+    {
+      "idx": 51,
+      "chunk_id": 52,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240739.pdf",
+      "cmr_ref": "240739",
+      "category_name": "DAIRY DRINKS",
+      "test_year": null,
+      "locator": "Danone Strawberry Skyr (Set 31)"
+    },
+    {
+      "idx": 52,
+      "chunk_id": 53,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240746.pdf",
+      "cmr_ref": "240746",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Tesco Finest Hot Cross Buns - Rhubarb & Custard 4 Pack (Set 31)"
+    },
+    {
+      "idx": 53,
+      "chunk_id": 54,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240747.pdf",
+      "cmr_ref": "240747",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Lidl (Set 31)"
+    },
+    {
+      "idx": 54,
+      "chunk_id": 55,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240749.pdf",
+      "cmr_ref": "240749",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Aldi Specially Selected Banoffee Hot Cross Buns 280g/4 Pack (Set 31)"
+    },
+    {
+      "idx": 55,
+      "chunk_id": 56,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240764.pdf",
+      "cmr_ref": "240764",
+      "category_name": "CEREALS",
+      "test_year": null,
+      "locator": "M&S Only 1 Ingredient Corn Flakes (Set 31)"
+    },
+    {
+      "idx": 56,
+      "chunk_id": 57,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240768.pdf",
+      "cmr_ref": "240768",
+      "category_name": "BAKERY",
+      "test_year": null,
+      "locator": "Waitrose 4 Flower Crumpets (Set 31)"
+    },
+    {
+      "idx": 57,
+      "chunk_id": 58,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240769.pdf",
+      "cmr_ref": "240769",
+      "category_name": "EASTER EGGS",
+      "test_year": null,
+      "locator": "Terry's Milk Chocolate Orange Minis Exploding Candy Easter Egg (Set 31)"
+    },
+    {
+      "idx": 58,
+      "chunk_id": 59,
+      "source_type": "product_report",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 32/240658.pdf",
+      "cmr_ref": "240658",
+      "category_name": "NON POTATO SNACKS",
+      "test_year": null,
+      "locator": "The Curators Pork Puffs Original Salted (Set 32)"
+    },
+    {
+      "idx": 59,
+      "chunk_id": 1000,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240517.pdf",
+      "cmr_ref": "240517",
+      "category_name": "SAVOURY BISCUITS / CRACKERS",
+      "test_year": null,
+      "locator": "Verbatims – Jacob's Red Leicester Flavour Bites"
+    },
+    {
+      "idx": 60,
+      "chunk_id": 1001,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240524.pdf",
+      "cmr_ref": "240524",
+      "category_name": "AMBIENT RICE & PASTA, NOODLES & GRAINS",
+      "test_year": null,
+      "locator": "Verbatims – Mac 'N' Cheese Head Macaroni & 3 Oozy Cheese"
+    },
+    {
+      "idx": 61,
+      "chunk_id": 1002,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240553.pdf",
+      "cmr_ref": "240553",
+      "category_name": "VEGAN MEAT & FISH ALTERNATIVES",
+      "test_year": null,
+      "locator": "Verbatims – Squeaky Bean tofu slices"
+    },
+    {
+      "idx": 62,
+      "chunk_id": 1003,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240554.pdf",
+      "cmr_ref": "240554",
+      "category_name": "DAIRY DRINKS",
+      "test_year": null,
+      "locator": "Verbatims – M&S YAY! Vanilla Mushroom Latte with Lions Mane"
+    },
+    {
+      "idx": 63,
+      "chunk_id": 1004,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240555.pdf",
+      "cmr_ref": "240555",
+      "category_name": "VEGAN ACCOMPANIMENTS",
+      "test_year": null,
+      "locator": "Verbatims – Plant based Boursin"
+    },
+    {
+      "idx": 64,
+      "chunk_id": 1005,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240556.pdf",
+      "cmr_ref": "240556",
+      "category_name": "CEREALS",
+      "test_year": null,
+      "locator": "Verbatims – Bio & Me Good Gut Puffs"
+    },
+    {
+      "idx": 65,
+      "chunk_id": 1006,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240559.pdf",
+      "cmr_ref": "240559",
+      "category_name": "VEGAN MEAT & FISH ALTERNATIVES",
+      "test_year": null,
+      "locator": "Verbatims – Quorn Smokey BBQ Filled Bites"
+    },
+    {
+      "idx": 66,
+      "chunk_id": 1007,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240560.pdf",
+      "cmr_ref": "240560",
+      "category_name": "ADULT SOFT DRINKS",
+      "test_year": null,
+      "locator": "Verbatims – Coca Cola Zero Sugar Lime"
+    },
+    {
+      "idx": 67,
+      "chunk_id": 1008,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240578.pdf",
+      "cmr_ref": "240578",
+      "category_name": "CHILLED FRUIT JUICE DRINKS (RTD)",
+      "test_year": null,
+      "locator": "Verbatims – Tropicana Multivitamin Boost Mixed Berries Juice"
+    },
+    {
+      "idx": 68,
+      "chunk_id": 1009,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 26/240579.pdf",
+      "cmr_ref": "240579",
+      "category_name": "HOUMOUS",
+      "test_year": null,
+      "locator": "Verbatims – Moorish Smoked Humous with Chilli Harissa"
+    },
+    {
+      "idx": 69,
+      "chunk_id": 1010,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240583.pdf",
+      "cmr_ref": "240583",
+      "category_name": "CREAM",
+      "test_year": null,
+      "locator": "Verbatims – Elmlea Salted Caramel Double Cream Alternative"
+    },
+    {
+      "idx": 70,
+      "chunk_id": 1011,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240586.pdf",
+      "cmr_ref": "240586",
+      "category_name": "SWEET FRUIT SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – 5th Season Fruit Mango & Raspberry Bites"
+    },
+    {
+      "idx": 71,
+      "chunk_id": 1012,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240587.pdf",
+      "cmr_ref": "240587",
+      "category_name": "CHOCOLATE BISCUITS",
+      "test_year": null,
+      "locator": "Verbatims – Thomas J Fudge's Milk Chocolate Florentines"
+    },
+    {
+      "idx": 72,
+      "chunk_id": 1013,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240588.pdf",
+      "cmr_ref": "240588",
+      "category_name": "NON POTATO SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – M&S Spanish Chorizo Crisps"
+    },
+    {
+      "idx": 73,
+      "chunk_id": 1014,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240590.pdf",
+      "cmr_ref": "240590",
+      "category_name": "INDIVIDUAL CAKES & PASTRIES",
+      "test_year": null,
+      "locator": "Verbatims – Apple and Mango Soreen Bars"
+    },
+    {
+      "idx": 74,
+      "chunk_id": 1015,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240591.pdf",
+      "cmr_ref": "240591",
+      "category_name": "SUGAR CONFECTIONARY",
+      "test_year": null,
+      "locator": "Verbatims – Haribo Nostalgix"
+    },
+    {
+      "idx": 75,
+      "chunk_id": 1016,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240592.pdf",
+      "cmr_ref": "240592",
+      "category_name": "NON DAIRY MILK DRINKS",
+      "test_year": null,
+      "locator": "Verbatims – Califia Farms Matcha Almond Latte"
+    },
+    {
+      "idx": 76,
+      "chunk_id": 1017,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240594.pdf",
+      "cmr_ref": "240594",
+      "category_name": "DAIRY FREE FOOD",
+      "test_year": null,
+      "locator": "Verbatims – Galaxy Dairy Free Hazelnut Praline"
+    },
+    {
+      "idx": 77,
+      "chunk_id": 1018,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240595.pdf",
+      "cmr_ref": "240595",
+      "category_name": "CEREALS",
+      "test_year": null,
+      "locator": "Verbatims – Jordans Popped Oat Crunch Chocolate"
+    },
+    {
+      "idx": 78,
+      "chunk_id": 1019,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240596.pdf",
+      "cmr_ref": "240596",
+      "category_name": "TRADITIONAL PREPARED SALADS",
+      "test_year": null,
+      "locator": "Verbatims – Florette Japanese Katsu Gourmet Slaw"
+    },
+    {
+      "idx": 79,
+      "chunk_id": 1020,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240597.pdf",
+      "cmr_ref": "240597",
+      "category_name": "INDIVIDUAL CAKES & PASTRIES",
+      "test_year": null,
+      "locator": "Verbatims – Mr Kipling Strawberry and Cream Fancies"
+    },
+    {
+      "idx": 80,
+      "chunk_id": 1021,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 27/240610.pdf",
+      "cmr_ref": "240610",
+      "category_name": "COLD SAVOURY SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – Mattessons Original Smoked Pork Sausage"
+    },
+    {
+      "idx": 81,
+      "chunk_id": 1022,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240611.pdf",
+      "cmr_ref": "240611",
+      "category_name": "NUT BUTTER & SWEET SPREADS",
+      "test_year": null,
+      "locator": "Verbatims – ASDA Cracking Chocolate Spread"
+    },
+    {
+      "idx": 82,
+      "chunk_id": 1023,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240627.pdf",
+      "cmr_ref": "240627",
+      "category_name": "SUGAR CONFECTIONARY",
+      "test_year": null,
+      "locator": "Verbatims – Lindt Lindor Original"
+    },
+    {
+      "idx": 83,
+      "chunk_id": 1024,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240628.pdf",
+      "cmr_ref": "240628",
+      "category_name": "BAKED BEANS",
+      "test_year": null,
+      "locator": "Verbatims – M&S No added sugar Baked Beans"
+    },
+    {
+      "idx": 84,
+      "chunk_id": 1025,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240629.pdf",
+      "cmr_ref": "240629",
+      "category_name": "SAVOURY SPECIALITY BREADS",
+      "test_year": null,
+      "locator": "Verbatims – Jason's Sunflower Seeded Protein Sourdough"
+    },
+    {
+      "idx": 85,
+      "chunk_id": 1026,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240630.pdf",
+      "cmr_ref": "240630",
+      "category_name": "SLICED MEATS",
+      "test_year": null,
+      "locator": "Verbatims – M&S British Wafer Thin Smoked Ham"
+    },
+    {
+      "idx": 86,
+      "chunk_id": 1027,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240631.pdf",
+      "cmr_ref": "240631",
+      "category_name": "TORTILLA CHIPS",
+      "test_year": null,
+      "locator": "Verbatims – Doritos Minecraft The Creeper Vinegar Flavour Sharing Crisps"
+    },
+    {
+      "idx": 87,
+      "chunk_id": 1028,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240632.pdf",
+      "cmr_ref": "240632",
+      "category_name": "COFFEE",
+      "test_year": null,
+      "locator": "Verbatims – Little's Premium Origin Instant Coffee Italian"
+    },
+    {
+      "idx": 88,
+      "chunk_id": 1029,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240633.pdf",
+      "cmr_ref": "240633",
+      "category_name": "HOT CHOCOLATE & DAIRY DRINKS",
+      "test_year": null,
+      "locator": "Verbatims – Galaxy Frothy Hot Chocolate"
+    },
+    {
+      "idx": 89,
+      "chunk_id": 1030,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240634.pdf",
+      "cmr_ref": "240634",
+      "category_name": "CREAM",
+      "test_year": null,
+      "locator": "Verbatims – M&S Double Cream"
+    },
+    {
+      "idx": 90,
+      "chunk_id": 1031,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240635.pdf",
+      "cmr_ref": "240635",
+      "category_name": "CUSTARDS",
+      "test_year": null,
+      "locator": "Verbatims – Sainsbury's Vanilla Custard Taste the Diffrence"
+    },
+    {
+      "idx": 91,
+      "chunk_id": 1032,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240636.pdf",
+      "cmr_ref": "240636",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – M&S Lemon Curd Hot Cross Buns"
+    },
+    {
+      "idx": 92,
+      "chunk_id": 1033,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 28/240638.pdf",
+      "cmr_ref": "240638",
+      "category_name": "CONFECTIONERY (CHOCOLATE - BLOCK) - MILK",
+      "test_year": null,
+      "locator": "Verbatims – Tony's Chocolonely Milk Chocolate Caramel Sea Salt"
+    },
+    {
+      "idx": 93,
+      "chunk_id": 1034,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240585.pdf",
+      "cmr_ref": "240585",
+      "category_name": "CHILLED SOUPS",
+      "test_year": null,
+      "locator": "Verbatims – Nourish Chicken Soup"
+    },
+    {
+      "idx": 94,
+      "chunk_id": 1035,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240650.pdf",
+      "cmr_ref": "240650",
+      "category_name": "CONFECTIONERY (CHOCOLATE - BLOCK) - MILK",
+      "test_year": null,
+      "locator": "Verbatims – KitKat Salted Caramel Chocolate Sharing Bar"
+    },
+    {
+      "idx": 95,
+      "chunk_id": 1036,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240662.pdf",
+      "cmr_ref": "240662",
+      "category_name": "LOW FAT YOGURTS",
+      "test_year": null,
+      "locator": "Verbatims – Biotiful Kefir Yogurt British Strawberry"
+    },
+    {
+      "idx": 96,
+      "chunk_id": 1037,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240671.pdf",
+      "cmr_ref": "240671",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – Co-op Irresistible Apple Crumble Hot Cross Buns"
+    },
+    {
+      "idx": 97,
+      "chunk_id": 1038,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240672.pdf",
+      "cmr_ref": "240672",
+      "category_name": "CHILLED NON VEGETARIAN PIZZAS",
+      "test_year": null,
+      "locator": "Verbatims – Co-op Limited Edition Irresistible Kashmiri Style Butter Chicken Pizza"
+    },
+    {
+      "idx": 98,
+      "chunk_id": 1039,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240676.pdf",
+      "cmr_ref": "240676",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – Exceptional by ASDA 4 Tiramisu Hot Cross Buns"
+    },
+    {
+      "idx": 99,
+      "chunk_id": 1040,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240677.pdf",
+      "cmr_ref": "240677",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – Waitrose Apricot & Stem Ginger Hot Cross Buns"
+    },
+    {
+      "idx": 100,
+      "chunk_id": 1041,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240686.pdf",
+      "cmr_ref": "240686",
+      "category_name": "LOW FAT YOGURTS",
+      "test_year": null,
+      "locator": "Verbatims – Onken Biopot Vanilla Yogurt"
+    },
+    {
+      "idx": 101,
+      "chunk_id": 1042,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240687.pdf",
+      "cmr_ref": "240687",
+      "category_name": "POTATO SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – Walkers Ready Salted Multipack Crisps 6x25g"
+    },
+    {
+      "idx": 102,
+      "chunk_id": 1043,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240696.pdf",
+      "cmr_ref": "240696",
+      "category_name": "NON POTATO SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – Walkers Wotsits Really Cheesy Multipack Snacks"
+    },
+    {
+      "idx": 103,
+      "chunk_id": 1044,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240698.pdf",
+      "cmr_ref": "240698",
+      "category_name": "AMBIENT COOKING SAUCES",
+      "test_year": null,
+      "locator": "Verbatims – Wagamama Coconut & Lemongrass Cooking Sauce"
+    },
+    {
+      "idx": 104,
+      "chunk_id": 1045,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 29/240699.pdf",
+      "cmr_ref": "240699",
+      "category_name": "BLENDED / FLAVOURED CHEESE",
+      "test_year": null,
+      "locator": "Verbatims – Smug Dairy Slices Blended Oat & Dairy Cheddar"
+    },
+    {
+      "idx": 105,
+      "chunk_id": 1046,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240584.pdf",
+      "cmr_ref": "240584",
+      "category_name": "PLAIN PORRIDGE",
+      "test_year": null,
+      "locator": "Verbatims – Ambrosia Ready to Eat Porridge - CINNAMON"
+    },
+    {
+      "idx": 106,
+      "chunk_id": 1047,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240682.pdf",
+      "cmr_ref": "240682",
+      "category_name": "SPREADS",
+      "test_year": null,
+      "locator": "Verbatims – Kerrygold Spreadable Butter with Maple and Cinnamon"
+    },
+    {
+      "idx": 107,
+      "chunk_id": 1048,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240716.pdf",
+      "cmr_ref": "240716",
+      "category_name": "INDIVIDUAL CAKES & PASTRIES",
+      "test_year": null,
+      "locator": "Verbatims – Nutella Chocolate & Hazelnut Ring Donut"
+    },
+    {
+      "idx": 108,
+      "chunk_id": 1049,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240719.pdf",
+      "cmr_ref": "240719",
+      "category_name": "SWEET SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – Go Ahead Cherry Crispy Fruit Slices Snack Bars Multipack"
+    },
+    {
+      "idx": 109,
+      "chunk_id": 1050,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240722.pdf",
+      "cmr_ref": "240722",
+      "category_name": "POTATO SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – Walkers Sensations Slow Roasted Pork & Apple Sauce Sharing Crisps"
+    },
+    {
+      "idx": 110,
+      "chunk_id": 1051,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240739.pdf",
+      "cmr_ref": "240739",
+      "category_name": "DAIRY DRINKS",
+      "test_year": null,
+      "locator": "Verbatims – Danone Strawberry Skyr"
+    },
+    {
+      "idx": 111,
+      "chunk_id": 1052,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240746.pdf",
+      "cmr_ref": "240746",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – Tesco Finest Hot Cross Buns - Rhubarb & Custard 4 Pack"
+    },
+    {
+      "idx": 112,
+      "chunk_id": 1053,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240747.pdf",
+      "cmr_ref": "240747",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – Lidl"
+    },
+    {
+      "idx": 113,
+      "chunk_id": 1054,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240749.pdf",
+      "cmr_ref": "240749",
+      "category_name": "HOT CROSS BUNS",
+      "test_year": null,
+      "locator": "Verbatims – Aldi Specially Selected Banoffee Hot Cross Buns 280g/4 Pack"
+    },
+    {
+      "idx": 114,
+      "chunk_id": 1055,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240764.pdf",
+      "cmr_ref": "240764",
+      "category_name": "CEREALS",
+      "test_year": null,
+      "locator": "Verbatims – M&S Only 1 Ingredient Corn Flakes"
+    },
+    {
+      "idx": 115,
+      "chunk_id": 1056,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240768.pdf",
+      "cmr_ref": "240768",
+      "category_name": "BAKERY",
+      "test_year": null,
+      "locator": "Verbatims – Waitrose 4 Flower Crumpets"
+    },
+    {
+      "idx": 116,
+      "chunk_id": 1057,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 31/240769.pdf",
+      "cmr_ref": "240769",
+      "category_name": "EASTER EGGS",
+      "test_year": null,
+      "locator": "Verbatims – Terry's Milk Chocolate Orange Minis Exploding Candy Easter Egg"
+    },
+    {
+      "idx": 117,
+      "chunk_id": 1058,
+      "source_type": "verbatim_group",
+      "source_file": "fis group data/Project Data/FoodFax/PDF Reports/2025/Set 32/240658.pdf",
+      "cmr_ref": "240658",
+      "category_name": "NON POTATO SNACKS",
+      "test_year": null,
+      "locator": "Verbatims – The Curators Pork Puffs Original Salted"
+    },
+    {
+      "idx": 118,
+      "chunk_id": 2000,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 1a: Likelihood to Notice"
+    },
+    {
+      "idx": 119,
+      "chunk_id": 2001,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 2a: Exciting New Idea"
+    },
+    {
+      "idx": 120,
+      "chunk_id": 2002,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 6: Market Comparison"
+    },
+    {
+      "idx": 121,
+      "chunk_id": 2003,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 2b: Initial Appeal (Want to try)"
+    },
+    {
+      "idx": 122,
+      "chunk_id": 2004,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 2e: Appearance"
+    },
+    {
+      "idx": 123,
+      "chunk_id": 2005,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 2f: Aroma"
+    },
+    {
+      "idx": 124,
+      "chunk_id": 2006,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 3a: Taste"
+    },
+    {
+      "idx": 125,
+      "chunk_id": 2007,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 3b: Texture"
+    },
+    {
+      "idx": 126,
+      "chunk_id": 2008,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 2d: Packaging"
+    },
+    {
+      "idx": 127,
+      "chunk_id": 2009,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 3c: Health"
+    },
+    {
+      "idx": 128,
+      "chunk_id": 2010,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 3d: Value for what you pay"
+    },
+    {
+      "idx": 129,
+      "chunk_id": 2011,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 3e: Overall Quality (older data Impression)"
+    },
+    {
+      "idx": 130,
+      "chunk_id": 2012,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 2c: Brand"
+    },
+    {
+      "idx": 131,
+      "chunk_id": 2013,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 1b: Pre-Test Interest in Purchase"
+    },
+    {
+      "idx": 132,
+      "chunk_id": 2014,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 4a: Full Price Post Test PI"
+    },
+    {
+      "idx": 133,
+      "chunk_id": 2015,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 4b: 25% Off PI"
+    },
+    {
+      "idx": 134,
+      "chunk_id": 2016,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 4c: 50% Off PI"
+    },
+    {
+      "idx": 135,
+      "chunk_id": 2017,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Aftertaste"
+    },
+    {
+      "idx": 136,
+      "chunk_id": 2018,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Refreshment"
+    },
+    {
+      "idx": 137,
+      "chunk_id": 2019,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Ease of Drinking"
+    },
+    {
+      "idx": 138,
+      "chunk_id": 2020,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Strength of Flavour"
+    },
+    {
+      "idx": 139,
+      "chunk_id": 2021,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Image"
+    },
+    {
+      "idx": 140,
+      "chunk_id": 2022,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Label Design"
+    },
+    {
+      "idx": 141,
+      "chunk_id": 2023,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Touch / Feel"
+    },
+    {
+      "idx": 142,
+      "chunk_id": 2024,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Freshness"
+    },
+    {
+      "idx": 143,
+      "chunk_id": 2025,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Colour"
+    },
+    {
+      "idx": 144,
+      "chunk_id": 2026,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 9: Star Rating"
+    },
+    {
+      "idx": 145,
+      "chunk_id": 2027,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 8: Recommend to a friend"
+    },
+    {
+      "idx": 146,
+      "chunk_id": 2028,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure 5: Frequency of purchase"
+    },
+    {
+      "idx": 147,
+      "chunk_id": 2029,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Overall Score Weight"
+    },
+    {
+      "idx": 148,
+      "chunk_id": 2030,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Relevance Score Weight"
+    },
+    {
+      "idx": 149,
+      "chunk_id": 2031,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Unweighted Relevance Score (2dcp)"
+    },
+    {
+      "idx": 150,
+      "chunk_id": 2032,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Weighted Relevance Score"
+    },
+    {
+      "idx": 151,
+      "chunk_id": 2033,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Unweighted Overall Score (2dcp)"
+    },
+    {
+      "idx": 152,
+      "chunk_id": 2034,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Weighted Overall Score"
+    },
+    {
+      "idx": 153,
+      "chunk_id": 2035,
+      "source_type": "measure_def",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Measure : Grocer Innovation Score"
+    },
+    {
+      "idx": 154,
+      "chunk_id": 3000,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "-",
+      "test_year": null,
+      "locator": "Category Norm – -"
+    },
+    {
+      "idx": 155,
+      "chunk_id": 3001,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sugar Confectionery",
+      "test_year": null,
+      "locator": "Category Norm – Sugar Confectionery"
+    },
+    {
+      "idx": 156,
+      "chunk_id": 3002,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Non Potato Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Non Potato Snacks"
+    },
+    {
+      "idx": 157,
+      "chunk_id": 3003,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Potato Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Potato Snacks"
+    },
+    {
+      "idx": 158,
+      "chunk_id": 3004,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Flavoured Yogurts/Fromage Frais",
+      "test_year": null,
+      "locator": "Category Norm – Flavoured Yogurts/Fromage Frais"
+    },
+    {
+      "idx": 159,
+      "chunk_id": 3005,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Fish & Seafood Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Fish & Seafood Meal Centres"
+    },
+    {
+      "idx": 160,
+      "chunk_id": 3006,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Soups",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Soups"
+    },
+    {
+      "idx": 161,
+      "chunk_id": 3007,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sausages",
+      "test_year": null,
+      "locator": "Category Norm – Sausages"
+    },
+    {
+      "idx": 162,
+      "chunk_id": 3008,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Table Sauces",
+      "test_year": null,
+      "locator": "Category Norm – Table Sauces"
+    },
+    {
+      "idx": 163,
+      "chunk_id": 3009,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Vegetarian Products",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Vegetarian Products"
+    },
+    {
+      "idx": 164,
+      "chunk_id": 3010,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Beef including Joints & steaks",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Beef including Joints & steaks"
+    },
+    {
+      "idx": 165,
+      "chunk_id": 3011,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Fish & Seafood Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Fish & Seafood Meal Centres"
+    },
+    {
+      "idx": 166,
+      "chunk_id": 3012,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Savoury Biscuits/Crackers",
+      "test_year": null,
+      "locator": "Category Norm – Savoury Biscuits/Crackers"
+    },
+    {
+      "idx": 167,
+      "chunk_id": 3013,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Savoury Speciality Breads",
+      "test_year": null,
+      "locator": "Category Norm – Savoury Speciality Breads"
+    },
+    {
+      "idx": 168,
+      "chunk_id": 3014,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Speciality Tea",
+      "test_year": null,
+      "locator": "Category Norm – Speciality Tea"
+    },
+    {
+      "idx": 169,
+      "chunk_id": 3015,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Family Sized Ice Creams",
+      "test_year": null,
+      "locator": "Category Norm – Family Sized Ice Creams"
+    },
+    {
+      "idx": 170,
+      "chunk_id": 3016,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Hot Eating Meat Pastries",
+      "test_year": null,
+      "locator": "Category Norm – Hot Eating Meat Pastries"
+    },
+    {
+      "idx": 171,
+      "chunk_id": 3017,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Baby/Toddler Foods",
+      "test_year": null,
+      "locator": "Category Norm – Baby/Toddler Foods"
+    },
+    {
+      "idx": 172,
+      "chunk_id": 3018,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cold Savoury Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Cold Savoury Snacks"
+    },
+    {
+      "idx": 173,
+      "chunk_id": 3019,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Granola",
+      "test_year": null,
+      "locator": "Category Norm – Granola"
+    },
+    {
+      "idx": 174,
+      "chunk_id": 3020,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Fruit Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Fruit Snacks"
+    },
+    {
+      "idx": 175,
+      "chunk_id": 3021,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Soft Cheese",
+      "test_year": null,
+      "locator": "Category Norm – Soft Cheese"
+    },
+    {
+      "idx": 176,
+      "chunk_id": 3022,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Individual Cakes & Pastries",
+      "test_year": null,
+      "locator": "Category Norm – Individual Cakes & Pastries"
+    },
+    {
+      "idx": 177,
+      "chunk_id": 3023,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chocolate confectionary",
+      "test_year": null,
+      "locator": "Category Norm – Chocolate confectionary"
+    },
+    {
+      "idx": 178,
+      "chunk_id": 3024,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Prepared salad",
+      "test_year": null,
+      "locator": "Category Norm – Prepared salad"
+    },
+    {
+      "idx": 179,
+      "chunk_id": 3025,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Snacks"
+    },
+    {
+      "idx": 180,
+      "chunk_id": 3026,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Coffee",
+      "test_year": null,
+      "locator": "Category Norm – Coffee"
+    },
+    {
+      "idx": 181,
+      "chunk_id": 3027,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Meat Ready Meals",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Meat Ready Meals"
+    },
+    {
+      "idx": 182,
+      "chunk_id": 3028,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Poultry",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Poultry"
+    },
+    {
+      "idx": 183,
+      "chunk_id": 3029,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient Rice & Pasta, Noodles & Grains",
+      "test_year": null,
+      "locator": "Category Norm – Ambient Rice & Pasta, Noodles & Grains"
+    },
+    {
+      "idx": 184,
+      "chunk_id": 3030,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vegetable Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Vegetable Snacks"
+    },
+    {
+      "idx": 185,
+      "chunk_id": 3031,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Adult Soft Drinks",
+      "test_year": null,
+      "locator": "Category Norm – Adult Soft Drinks"
+    },
+    {
+      "idx": 186,
+      "chunk_id": 3032,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Functional Drinks (incl Energy)",
+      "test_year": null,
+      "locator": "Category Norm – Functional Drinks (incl Energy)"
+    },
+    {
+      "idx": 187,
+      "chunk_id": 3033,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Biscuits",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Biscuits"
+    },
+    {
+      "idx": 188,
+      "chunk_id": 3034,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Bakery",
+      "test_year": null,
+      "locator": "Category Norm – Bakery"
+    },
+    {
+      "idx": 189,
+      "chunk_id": 3035,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chocolate Biscuits",
+      "test_year": null,
+      "locator": "Category Norm – Chocolate Biscuits"
+    },
+    {
+      "idx": 190,
+      "chunk_id": 3036,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient/Chilled Hot Eating Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Ambient/Chilled Hot Eating Desserts"
+    },
+    {
+      "idx": 191,
+      "chunk_id": 3037,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cooking Sauces",
+      "test_year": null,
+      "locator": "Category Norm – Cooking Sauces"
+    },
+    {
+      "idx": 192,
+      "chunk_id": 3038,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cheddar",
+      "test_year": null,
+      "locator": "Category Norm – Cheddar"
+    },
+    {
+      "idx": 193,
+      "chunk_id": 3039,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled / Frozen Sharing Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Chilled / Frozen Sharing Desserts"
+    },
+    {
+      "idx": 194,
+      "chunk_id": 3040,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Potato Products including sweet potato",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Potato Products including sweet potato"
+    },
+    {
+      "idx": 195,
+      "chunk_id": 3041,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cold Sandwiches/Wraps",
+      "test_year": null,
+      "locator": "Category Norm – Cold Sandwiches/Wraps"
+    },
+    {
+      "idx": 196,
+      "chunk_id": 3042,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Individual Pot Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Individual Pot Desserts"
+    },
+    {
+      "idx": 197,
+      "chunk_id": 3043,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Pot Snack Meals",
+      "test_year": null,
+      "locator": "Category Norm – Pot Snack Meals"
+    },
+    {
+      "idx": 198,
+      "chunk_id": 3044,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Meal Kits",
+      "test_year": null,
+      "locator": "Category Norm – Meal Kits"
+    },
+    {
+      "idx": 199,
+      "chunk_id": 3045,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cereals",
+      "test_year": null,
+      "locator": "Category Norm – Cereals"
+    },
+    {
+      "idx": 200,
+      "chunk_id": 3046,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Pork – incl joints",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Pork – incl joints"
+    },
+    {
+      "idx": 201,
+      "chunk_id": 3047,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Whole Cakes (not festive)",
+      "test_year": null,
+      "locator": "Category Norm – Whole Cakes (not festive)"
+    },
+    {
+      "idx": 202,
+      "chunk_id": 3048,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Vegetarian Products",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Vegetarian Products"
+    },
+    {
+      "idx": 203,
+      "chunk_id": 3049,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Nut Snacks & Seeds",
+      "test_year": null,
+      "locator": "Category Norm – Nut Snacks & Seeds"
+    },
+    {
+      "idx": 204,
+      "chunk_id": 3050,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Deli Products",
+      "test_year": null,
+      "locator": "Category Norm – Deli Products"
+    },
+    {
+      "idx": 205,
+      "chunk_id": 3051,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Confectionery (Chocolate - block) - Milk",
+      "test_year": null,
+      "locator": "Category Norm – Confectionery (Chocolate - block) - Milk"
+    },
+    {
+      "idx": 206,
+      "chunk_id": 3052,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Party Food",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Party Food"
+    },
+    {
+      "idx": 207,
+      "chunk_id": 3053,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient/Chilled Cold Eating Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Ambient/Chilled Cold Eating Desserts"
+    },
+    {
+      "idx": 208,
+      "chunk_id": 3054,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vegan Ready Meals / Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Vegan Ready Meals / Meal Centres"
+    },
+    {
+      "idx": 209,
+      "chunk_id": 3055,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "individual Cakes, Muffins & Brownies",
+      "test_year": null,
+      "locator": "Category Norm – individual Cakes, Muffins & Brownies"
+    },
+    {
+      "idx": 210,
+      "chunk_id": 3056,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Dairy Drinks",
+      "test_year": null,
+      "locator": "Category Norm – Dairy Drinks"
+    },
+    {
+      "idx": 211,
+      "chunk_id": 3057,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vegan Meat & Fish Alternatives",
+      "test_year": null,
+      "locator": "Category Norm – Vegan Meat & Fish Alternatives"
+    },
+    {
+      "idx": 212,
+      "chunk_id": 3058,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Indian Foods",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Indian Foods"
+    },
+    {
+      "idx": 213,
+      "chunk_id": 3059,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Party Food",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Party Food"
+    },
+    {
+      "idx": 214,
+      "chunk_id": 3060,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cold Eating Savoury Pastries",
+      "test_year": null,
+      "locator": "Category Norm – Cold Eating Savoury Pastries"
+    },
+    {
+      "idx": 215,
+      "chunk_id": 3061,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient Liquid Soups",
+      "test_year": null,
+      "locator": "Category Norm – Ambient Liquid Soups"
+    },
+    {
+      "idx": 216,
+      "chunk_id": 3062,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Meat Burgers",
+      "test_year": null,
+      "locator": "Category Norm – Meat Burgers"
+    },
+    {
+      "idx": 217,
+      "chunk_id": 3063,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vegan Accompaniments",
+      "test_year": null,
+      "locator": "Category Norm – Vegan Accompaniments"
+    },
+    {
+      "idx": 218,
+      "chunk_id": 3064,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Individual Ice Creams",
+      "test_year": null,
+      "locator": "Category Norm – Individual Ice Creams"
+    },
+    {
+      "idx": 219,
+      "chunk_id": 3065,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Meat Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Meat Meal Centres"
+    },
+    {
+      "idx": 220,
+      "chunk_id": 3066,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Flavoured Water / Iced Tea",
+      "test_year": null,
+      "locator": "Category Norm – Flavoured Water / Iced Tea"
+    },
+    {
+      "idx": 221,
+      "chunk_id": 3067,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sliced Meats",
+      "test_year": null,
+      "locator": "Category Norm – Sliced Meats"
+    },
+    {
+      "idx": 222,
+      "chunk_id": 3068,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Fruit Juice Drinks (RTD)",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Fruit Juice Drinks (RTD)"
+    },
+    {
+      "idx": 223,
+      "chunk_id": 3069,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cereal Bars",
+      "test_year": null,
+      "locator": "Category Norm – Cereal Bars"
+    },
+    {
+      "idx": 224,
+      "chunk_id": 3070,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Non Vegetarian Pizzas",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Non Vegetarian Pizzas"
+    },
+    {
+      "idx": 225,
+      "chunk_id": 3071,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Indian Sauces",
+      "test_year": null,
+      "locator": "Category Norm – Indian Sauces"
+    },
+    {
+      "idx": 226,
+      "chunk_id": 3072,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Oriental Foods",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Oriental Foods"
+    },
+    {
+      "idx": 227,
+      "chunk_id": 3073,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient Fruit Juice Drinks (RTD)",
+      "test_year": null,
+      "locator": "Category Norm – Ambient Fruit Juice Drinks (RTD)"
+    },
+    {
+      "idx": 228,
+      "chunk_id": 3074,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Hot savoury hand held snacks (incl sandwich & wrap)",
+      "test_year": null,
+      "locator": "Category Norm – Hot savoury hand held snacks (incl sandwich & wrap)"
+    },
+    {
+      "idx": 229,
+      "chunk_id": 3075,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Oriental Sauces",
+      "test_year": null,
+      "locator": "Category Norm – Oriental Sauces"
+    },
+    {
+      "idx": 230,
+      "chunk_id": 3076,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Coated Fish",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Coated Fish"
+    },
+    {
+      "idx": 231,
+      "chunk_id": 3077,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Pasta",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Pasta"
+    },
+    {
+      "idx": 232,
+      "chunk_id": 3078,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Hot Eating Chicken Pastries",
+      "test_year": null,
+      "locator": "Category Norm – Hot Eating Chicken Pastries"
+    },
+    {
+      "idx": 233,
+      "chunk_id": 3079,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Meal Accompaniments",
+      "test_year": null,
+      "locator": "Category Norm – Festive Meal Accompaniments"
+    },
+    {
+      "idx": 234,
+      "chunk_id": 3080,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen World Foods",
+      "test_year": null,
+      "locator": "Category Norm – Frozen World Foods"
+    },
+    {
+      "idx": 235,
+      "chunk_id": 3081,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Salad Vegetables & Bagged Salad",
+      "test_year": null,
+      "locator": "Category Norm – Salad Vegetables & Bagged Salad"
+    },
+    {
+      "idx": 236,
+      "chunk_id": 3082,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Festive Desserts"
+    },
+    {
+      "idx": 237,
+      "chunk_id": 3083,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Non Vegetarian Pizzas",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Non Vegetarian Pizzas"
+    },
+    {
+      "idx": 238,
+      "chunk_id": 3084,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Popcorn",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Popcorn"
+    },
+    {
+      "idx": 239,
+      "chunk_id": 3085,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Non Dairy Milk Drinks",
+      "test_year": null,
+      "locator": "Category Norm – Non Dairy Milk Drinks"
+    },
+    {
+      "idx": 240,
+      "chunk_id": 3086,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Hot Eating Vegetarian Pastries",
+      "test_year": null,
+      "locator": "Category Norm – Hot Eating Vegetarian Pastries"
+    },
+    {
+      "idx": 241,
+      "chunk_id": 3087,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Pâtés/Spreads/Sandwich Fillings",
+      "test_year": null,
+      "locator": "Category Norm – Pâtés/Spreads/Sandwich Fillings"
+    },
+    {
+      "idx": 242,
+      "chunk_id": 3088,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Vegan Products",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Vegan Products"
+    },
+    {
+      "idx": 243,
+      "chunk_id": 3089,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Meal Accompaniments",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Meal Accompaniments"
+    },
+    {
+      "idx": 244,
+      "chunk_id": 3090,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Carbonated Drinks (Family)",
+      "test_year": null,
+      "locator": "Category Norm – Carbonated Drinks (Family)"
+    },
+    {
+      "idx": 245,
+      "chunk_id": 3091,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Tomato Pasta Sauces",
+      "test_year": null,
+      "locator": "Category Norm – Tomato Pasta Sauces"
+    },
+    {
+      "idx": 246,
+      "chunk_id": 3092,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Hot Eating Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Hot Eating Desserts"
+    },
+    {
+      "idx": 247,
+      "chunk_id": 3093,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Bread Loaves",
+      "test_year": null,
+      "locator": "Category Norm – Bread Loaves"
+    },
+    {
+      "idx": 248,
+      "chunk_id": 3094,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Cold Eating Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Cold Eating Desserts"
+    },
+    {
+      "idx": 249,
+      "chunk_id": 3095,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Savoury Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Festive Savoury Snacks"
+    },
+    {
+      "idx": 250,
+      "chunk_id": 3096,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Meat Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Meat Meal Centres"
+    },
+    {
+      "idx": 251,
+      "chunk_id": 3097,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Easter Eggs",
+      "test_year": null,
+      "locator": "Category Norm – Easter Eggs"
+    },
+    {
+      "idx": 252,
+      "chunk_id": 3098,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient Fish Ready Meals/Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Ambient Fish Ready Meals/Meal Centres"
+    },
+    {
+      "idx": 253,
+      "chunk_id": 3099,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Bacon",
+      "test_year": null,
+      "locator": "Category Norm – Bacon"
+    },
+    {
+      "idx": 254,
+      "chunk_id": 3100,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Blended/Flavoured Cheese",
+      "test_year": null,
+      "locator": "Category Norm – Blended/Flavoured Cheese"
+    },
+    {
+      "idx": 255,
+      "chunk_id": 3101,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Savoury Quiches & Tarts",
+      "test_year": null,
+      "locator": "Category Norm – Savoury Quiches & Tarts"
+    },
+    {
+      "idx": 256,
+      "chunk_id": 3102,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Meal Accompaniments",
+      "test_year": null,
+      "locator": "Category Norm – Meal Accompaniments"
+    },
+    {
+      "idx": 257,
+      "chunk_id": 3103,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Ready Meals / Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Ready Meals / Meal Centres"
+    },
+    {
+      "idx": 258,
+      "chunk_id": 3104,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Dairy Free Food",
+      "test_year": null,
+      "locator": "Category Norm – Dairy Free Food"
+    },
+    {
+      "idx": 259,
+      "chunk_id": 3105,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Squashes/Cordials",
+      "test_year": null,
+      "locator": "Category Norm – Squashes/Cordials"
+    },
+    {
+      "idx": 260,
+      "chunk_id": 3106,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Oils",
+      "test_year": null,
+      "locator": "Category Norm – Oils"
+    },
+    {
+      "idx": 261,
+      "chunk_id": 3107,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chocolate Cookies",
+      "test_year": null,
+      "locator": "Category Norm – Chocolate Cookies"
+    },
+    {
+      "idx": 262,
+      "chunk_id": 3108,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Poultry & Duck - Joints/Whole Birds",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Poultry & Duck - Joints/Whole Birds"
+    },
+    {
+      "idx": 263,
+      "chunk_id": 3109,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Blue & Veined Cheeses",
+      "test_year": null,
+      "locator": "Category Norm – Blue & Veined Cheeses"
+    },
+    {
+      "idx": 264,
+      "chunk_id": 3110,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Pesto",
+      "test_year": null,
+      "locator": "Category Norm – Pesto"
+    },
+    {
+      "idx": 265,
+      "chunk_id": 3111,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Fruits",
+      "test_year": null,
+      "locator": "Category Norm – Fruits"
+    },
+    {
+      "idx": 266,
+      "chunk_id": 3112,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Coated Fish",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Coated Fish"
+    },
+    {
+      "idx": 267,
+      "chunk_id": 3113,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Continental Meat",
+      "test_year": null,
+      "locator": "Category Norm – Continental Meat"
+    },
+    {
+      "idx": 268,
+      "chunk_id": 3114,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Nut Butter & Sweet spreads",
+      "test_year": null,
+      "locator": "Category Norm – Nut Butter & Sweet spreads"
+    },
+    {
+      "idx": 269,
+      "chunk_id": 3115,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "British Cheeses",
+      "test_year": null,
+      "locator": "Category Norm – British Cheeses"
+    },
+    {
+      "idx": 270,
+      "chunk_id": 3116,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Continental Hard Cheese",
+      "test_year": null,
+      "locator": "Category Norm – Continental Hard Cheese"
+    },
+    {
+      "idx": 271,
+      "chunk_id": 3117,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Mince Pies",
+      "test_year": null,
+      "locator": "Category Norm – Mince Pies"
+    },
+    {
+      "idx": 272,
+      "chunk_id": 3118,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Other Vegetables",
+      "test_year": null,
+      "locator": "Category Norm – Other Vegetables"
+    },
+    {
+      "idx": 273,
+      "chunk_id": 3119,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Confectionery (Chocolate - block) - Dark",
+      "test_year": null,
+      "locator": "Category Norm – Confectionery (Chocolate - block) - Dark"
+    },
+    {
+      "idx": 274,
+      "chunk_id": 3120,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Porridge",
+      "test_year": null,
+      "locator": "Category Norm – Porridge"
+    },
+    {
+      "idx": 275,
+      "chunk_id": 3121,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Savoury Snacks",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Savoury Snacks"
+    },
+    {
+      "idx": 276,
+      "chunk_id": 3122,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Pickles/Relishes",
+      "test_year": null,
+      "locator": "Category Norm – Pickles/Relishes"
+    },
+    {
+      "idx": 277,
+      "chunk_id": 3123,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Tonic Water & Mixers",
+      "test_year": null,
+      "locator": "Category Norm – Tonic Water & Mixers"
+    },
+    {
+      "idx": 278,
+      "chunk_id": 3124,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Coffee - Capsules and Bags",
+      "test_year": null,
+      "locator": "Category Norm – Coffee - Capsules and Bags"
+    },
+    {
+      "idx": 279,
+      "chunk_id": 3125,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Honey & syrups",
+      "test_year": null,
+      "locator": "Category Norm – Honey & syrups"
+    },
+    {
+      "idx": 280,
+      "chunk_id": 3126,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Potato Products including sweet potato",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Potato Products including sweet potato"
+    },
+    {
+      "idx": 281,
+      "chunk_id": 3127,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Tea",
+      "test_year": null,
+      "locator": "Category Norm – Tea"
+    },
+    {
+      "idx": 282,
+      "chunk_id": 3128,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled World Foods",
+      "test_year": null,
+      "locator": "Category Norm – Chilled World Foods"
+    },
+    {
+      "idx": 283,
+      "chunk_id": 3129,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Individual Cakes & Biscuits",
+      "test_year": null,
+      "locator": "Category Norm – Festive Individual Cakes & Biscuits"
+    },
+    {
+      "idx": 284,
+      "chunk_id": 3130,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Tortilla Chips",
+      "test_year": null,
+      "locator": "Category Norm – Tortilla Chips"
+    },
+    {
+      "idx": 285,
+      "chunk_id": 3131,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Turkey & Festive Poultry",
+      "test_year": null,
+      "locator": "Category Norm – Turkey & Festive Poultry"
+    },
+    {
+      "idx": 286,
+      "chunk_id": 3132,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Houmous",
+      "test_year": null,
+      "locator": "Category Norm – Houmous"
+    },
+    {
+      "idx": 287,
+      "chunk_id": 3133,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Biscuit",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Biscuit"
+    },
+    {
+      "idx": 288,
+      "chunk_id": 3134,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient Ready Meals/Meal Centres",
+      "test_year": null,
+      "locator": "Category Norm – Ambient Ready Meals/Meal Centres"
+    },
+    {
+      "idx": 289,
+      "chunk_id": 3135,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Vegetables",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Vegetables"
+    },
+    {
+      "idx": 290,
+      "chunk_id": 3136,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Jams/conserves & preserves",
+      "test_year": null,
+      "locator": "Category Norm – Jams/conserves & preserves"
+    },
+    {
+      "idx": 291,
+      "chunk_id": 3137,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Muesli",
+      "test_year": null,
+      "locator": "Category Norm – Muesli"
+    },
+    {
+      "idx": 292,
+      "chunk_id": 3138,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Vegetarian Pizzas",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Vegetarian Pizzas"
+    },
+    {
+      "idx": 293,
+      "chunk_id": 3139,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chutneys",
+      "test_year": null,
+      "locator": "Category Norm – Chutneys"
+    },
+    {
+      "idx": 294,
+      "chunk_id": 3140,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Ambient Vegetables, Beans & Pulses",
+      "test_year": null,
+      "locator": "Category Norm – Ambient Vegetables, Beans & Pulses"
+    },
+    {
+      "idx": 295,
+      "chunk_id": 3141,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Mayonnaise",
+      "test_year": null,
+      "locator": "Category Norm – Mayonnaise"
+    },
+    {
+      "idx": 296,
+      "chunk_id": 3142,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Christmas Pudding",
+      "test_year": null,
+      "locator": "Category Norm – Christmas Pudding"
+    },
+    {
+      "idx": 297,
+      "chunk_id": 3143,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cookies",
+      "test_year": null,
+      "locator": "Category Norm – Cookies"
+    },
+    {
+      "idx": 298,
+      "chunk_id": 3144,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Rolls/wraps",
+      "test_year": null,
+      "locator": "Category Norm – Rolls/wraps"
+    },
+    {
+      "idx": 299,
+      "chunk_id": 3145,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chocolate Biscuit Bars",
+      "test_year": null,
+      "locator": "Category Norm – Chocolate Biscuit Bars"
+    },
+    {
+      "idx": 300,
+      "chunk_id": 3146,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vinegars",
+      "test_year": null,
+      "locator": "Category Norm – Vinegars"
+    },
+    {
+      "idx": 301,
+      "chunk_id": 3147,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled/Frozen Smoothies",
+      "test_year": null,
+      "locator": "Category Norm – Chilled/Frozen Smoothies"
+    },
+    {
+      "idx": 302,
+      "chunk_id": 3148,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Salad Dressings",
+      "test_year": null,
+      "locator": "Category Norm – Salad Dressings"
+    },
+    {
+      "idx": 303,
+      "chunk_id": 3149,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Dips",
+      "test_year": null,
+      "locator": "Category Norm – Dips"
+    },
+    {
+      "idx": 304,
+      "chunk_id": 3150,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Ingredients",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Ingredients"
+    },
+    {
+      "idx": 305,
+      "chunk_id": 3151,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vegan Food to go",
+      "test_year": null,
+      "locator": "Category Norm – Vegan Food to go"
+    },
+    {
+      "idx": 306,
+      "chunk_id": 3152,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Poultry",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Poultry"
+    },
+    {
+      "idx": 307,
+      "chunk_id": 3153,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Dry Sauces/Gravy/Seasonings",
+      "test_year": null,
+      "locator": "Category Norm – Dry Sauces/Gravy/Seasonings"
+    },
+    {
+      "idx": 308,
+      "chunk_id": 3154,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Vegetarian Pizzas",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Vegetarian Pizzas"
+    },
+    {
+      "idx": 309,
+      "chunk_id": 3155,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Filled Pasta",
+      "test_year": null,
+      "locator": "Category Norm – Filled Pasta"
+    },
+    {
+      "idx": 310,
+      "chunk_id": 3156,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Pasta",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Pasta"
+    },
+    {
+      "idx": 311,
+      "chunk_id": 3157,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Non Dairy/Healthy Ice Creams",
+      "test_year": null,
+      "locator": "Category Norm – Non Dairy/Healthy Ice Creams"
+    },
+    {
+      "idx": 312,
+      "chunk_id": 3158,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Individual Ice Lollies/Sorbets",
+      "test_year": null,
+      "locator": "Category Norm – Individual Ice Lollies/Sorbets"
+    },
+    {
+      "idx": 313,
+      "chunk_id": 3159,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Spreads",
+      "test_year": null,
+      "locator": "Category Norm – Spreads"
+    },
+    {
+      "idx": 314,
+      "chunk_id": 3160,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Lasagne",
+      "test_year": null,
+      "locator": "Category Norm – Lasagne"
+    },
+    {
+      "idx": 315,
+      "chunk_id": 3161,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Cake/Pastry/Biscuit Mixes",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Cake/Pastry/Biscuit Mixes"
+    },
+    {
+      "idx": 316,
+      "chunk_id": 3162,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Savoury Ingredients",
+      "test_year": null,
+      "locator": "Category Norm – Savoury Ingredients"
+    },
+    {
+      "idx": 317,
+      "chunk_id": 3163,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Rice & Pasta, Noodles & Grains",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Rice & Pasta, Noodles & Grains"
+    },
+    {
+      "idx": 318,
+      "chunk_id": 3164,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Plain/Soy/Grain Yogurts",
+      "test_year": null,
+      "locator": "Category Norm – Plain/Soy/Grain Yogurts"
+    },
+    {
+      "idx": 319,
+      "chunk_id": 3165,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Meats",
+      "test_year": null,
+      "locator": "Category Norm – Festive Meats"
+    },
+    {
+      "idx": 320,
+      "chunk_id": 3166,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled/Frozen Individual Cakes/Pastries",
+      "test_year": null,
+      "locator": "Category Norm – Chilled/Frozen Individual Cakes/Pastries"
+    },
+    {
+      "idx": 321,
+      "chunk_id": 3167,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Block Butter",
+      "test_year": null,
+      "locator": "Category Norm – Block Butter"
+    },
+    {
+      "idx": 322,
+      "chunk_id": 3168,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Cake",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Cake"
+    },
+    {
+      "idx": 323,
+      "chunk_id": 3169,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Cereal Bars",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Cereal Bars"
+    },
+    {
+      "idx": 324,
+      "chunk_id": 3170,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Sauce & Chutneys",
+      "test_year": null,
+      "locator": "Category Norm – Festive Sauce & Chutneys"
+    },
+    {
+      "idx": 325,
+      "chunk_id": 3171,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Hot Chocolate & Dairy Drinks",
+      "test_year": null,
+      "locator": "Category Norm – Hot Chocolate & Dairy Drinks"
+    },
+    {
+      "idx": 326,
+      "chunk_id": 3172,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Vegan Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Vegan Desserts"
+    },
+    {
+      "idx": 327,
+      "chunk_id": 3173,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Custards",
+      "test_year": null,
+      "locator": "Category Norm – Custards"
+    },
+    {
+      "idx": 328,
+      "chunk_id": 3174,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Root Vegetables",
+      "test_year": null,
+      "locator": "Category Norm – Root Vegetables"
+    },
+    {
+      "idx": 329,
+      "chunk_id": 3175,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Non-Alcoholic Alternatives",
+      "test_year": null,
+      "locator": "Category Norm – Non-Alcoholic Alternatives"
+    },
+    {
+      "idx": 330,
+      "chunk_id": 3176,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Hot Cross Buns",
+      "test_year": null,
+      "locator": "Category Norm – Hot Cross Buns"
+    },
+    {
+      "idx": 331,
+      "chunk_id": 3177,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Chilled Lamb",
+      "test_year": null,
+      "locator": "Category Norm – Chilled Lamb"
+    },
+    {
+      "idx": 332,
+      "chunk_id": 3178,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Frozen Meat Ready Meals",
+      "test_year": null,
+      "locator": "Category Norm – Frozen Meat Ready Meals"
+    },
+    {
+      "idx": 333,
+      "chunk_id": 3179,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Family sized sorbet and frozen yogurt",
+      "test_year": null,
+      "locator": "Category Norm – Family sized sorbet and frozen yogurt"
+    },
+    {
+      "idx": 334,
+      "chunk_id": 3180,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Meal Accompaniments",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Meal Accompaniments"
+    },
+    {
+      "idx": 335,
+      "chunk_id": 3181,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Low Fat Yogurts",
+      "test_year": null,
+      "locator": "Category Norm – Low Fat Yogurts"
+    },
+    {
+      "idx": 336,
+      "chunk_id": 3182,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Coleslaw",
+      "test_year": null,
+      "locator": "Category Norm – Coleslaw"
+    },
+    {
+      "idx": 337,
+      "chunk_id": 3183,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Bakery",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Bakery"
+    },
+    {
+      "idx": 338,
+      "chunk_id": 3184,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Curds & marmalades",
+      "test_year": null,
+      "locator": "Category Norm – Curds & marmalades"
+    },
+    {
+      "idx": 339,
+      "chunk_id": 3185,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Shortbread",
+      "test_year": null,
+      "locator": "Category Norm – Shortbread"
+    },
+    {
+      "idx": 340,
+      "chunk_id": 3186,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Desserts",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Desserts"
+    },
+    {
+      "idx": 341,
+      "chunk_id": 3187,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Baked Beans",
+      "test_year": null,
+      "locator": "Category Norm – Baked Beans"
+    },
+    {
+      "idx": 342,
+      "chunk_id": 3188,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Christmas Cake",
+      "test_year": null,
+      "locator": "Category Norm – Christmas Cake"
+    },
+    {
+      "idx": 343,
+      "chunk_id": 3189,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Festive Whole Cakes",
+      "test_year": null,
+      "locator": "Category Norm – Festive Whole Cakes"
+    },
+    {
+      "idx": 344,
+      "chunk_id": 3190,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Sweet Sauces & Toppings",
+      "test_year": null,
+      "locator": "Category Norm – Sweet Sauces & Toppings"
+    },
+    {
+      "idx": 345,
+      "chunk_id": 3191,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Gluten Free Breakfast Cereals",
+      "test_year": null,
+      "locator": "Category Norm – Gluten Free Breakfast Cereals"
+    },
+    {
+      "idx": 346,
+      "chunk_id": 3192,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Prepared Fresh Fruits",
+      "test_year": null,
+      "locator": "Category Norm – Prepared Fresh Fruits"
+    },
+    {
+      "idx": 347,
+      "chunk_id": 3193,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Cream",
+      "test_year": null,
+      "locator": "Category Norm – Cream"
+    },
+    {
+      "idx": 348,
+      "chunk_id": 3194,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Savoury Bread/Pastry Mixes",
+      "test_year": null,
+      "locator": "Category Norm – Savoury Bread/Pastry Mixes"
+    },
+    {
+      "idx": 349,
+      "chunk_id": 3195,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Confectionery (Chocolate - block) - White",
+      "test_year": null,
+      "locator": "Category Norm – Confectionery (Chocolate - block) - White"
+    },
+    {
+      "idx": 350,
+      "chunk_id": 3196,
+      "source_type": "category_norm",
+      "source_file": "Foodfax Database ARCHIVE.xlsm",
+      "cmr_ref": null,
+      "category_name": "Stir Fry Mixes",
+      "test_year": null,
+      "locator": "Category Norm – Stir Fry Mixes"
+    },
+    {
+      "idx": 351,
+      "chunk_id": 4000,
+      "source_type": "methodology",
+      "source_file": "Foodfax Database details.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "FoodFax Methodology & REPORT TEMPLATES"
+    },
+    {
+      "idx": 352,
+      "chunk_id": 5000,
+      "source_type": "crosstab_summary",
+      "source_file": "FFX Tables set 26.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Crosstab Tables – FFX Tables set 26.xlsx"
+    },
+    {
+      "idx": 353,
+      "chunk_id": 5001,
+      "source_type": "crosstab_summary",
+      "source_file": "FFX Tables set 27.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Crosstab Tables – FFX Tables set 27.xlsx"
+    },
+    {
+      "idx": 354,
+      "chunk_id": 5002,
+      "source_type": "crosstab_summary",
+      "source_file": "FFX Tables set 28.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Crosstab Tables – FFX Tables set 28.xlsx"
+    },
+    {
+      "idx": 355,
+      "chunk_id": 5003,
+      "source_type": "crosstab_summary",
+      "source_file": "FFX Tables set 31.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Crosstab Tables – FFX Tables set 31.xlsx"
+    },
+    {
+      "idx": 356,
+      "chunk_id": 5004,
+      "source_type": "crosstab_summary",
+      "source_file": "Foodfax Tables Set 29.xlsx",
+      "cmr_ref": null,
+      "category_name": null,
+      "test_year": null,
+      "locator": "Crosstab Tables – Foodfax Tables Set 29.xlsx"
+    }
+  ]
+}

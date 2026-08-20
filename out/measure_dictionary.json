@@ -1,0 +1,4291 @@
+{
+  "summary": {
+    "measures_total": 36,
+    "measures_mapped": 35,
+    "measures_unmapped": 1,
+    "mapping_rate_pct": 97.2,
+    "calculated_measures": 7,
+    "physical_tables_scanned": {
+      "ffx_pre_2021": 61,
+      "norm_data": 112,
+      "ffx_data": 534
+    },
+    "unmapped_detail": [
+      {
+        "code": "5",
+        "question": "Frequency of purchase",
+        "reason": "no column within similarity threshold"
+      }
+    ],
+    "statistics_distribution": {
+      "MEAN": 29,
+      "T2B": 25,
+      "T3B": 0,
+      "T4B": 1,
+      "B2B": 1,
+      "DIST": 2,
+      "CALC": 7,
+      "DEFPROB": 1,
+      "UNSPECIFIED": 0
+    },
+    "measures_with_named_clients": 8,
+    "measures_tied_to_report_templates": 8
+  },
+  "measures": [
+    {
+      "question_code": "1a",
+      "question": "Likelihood to Notice",
+      "question_raw": "1a. Likelihood to Notice",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "likelihood to notice",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Notice",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Notice",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Notice",
+          "column_index": 5,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Notice",
+          "column_index": 37,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Notice",
+          "column_index": 5,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Notice",
+          "column_index": 37,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Notice",
+          "column_index": 5,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Notice",
+          "column_index": 37,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Notice",
+          "column_index": 5,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Notice",
+          "column_index": 37,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Notice",
+          "column_index": 5,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Notice",
+          "column_index": 37,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Notice",
+          "column_index": 5,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Notice",
+          "column_index": 37,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "2a",
+      "question": "Exciting New Idea",
+      "question_raw": "2a. Exciting New Idea",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "Califia Farms / Hain Celestial",
+      "is_calculated": false,
+      "normalised": "exciting new idea",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Exciting New Idea",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Exciting New Idea",
+          "column_index": 6,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 38,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Exciting New Idea",
+          "column_index": 6,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 38,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Exciting New Idea",
+          "column_index": 6,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 38,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Exciting New Idea",
+          "column_index": 6,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 38,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Exciting New Idea",
+          "column_index": 6,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 38,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Exciting New Idea",
+          "column_index": 6,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Exciting New Idea",
+          "column_index": 38,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_pre_2021",
+          "column": "MS \u00b7 New&Different",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 0.897
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "ffx_pre_2021",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "6",
+      "question": "Market Comparison",
+      "question_raw": "6. Market Comparison",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box / Bottom 2 Box",
+      "statistics": [
+        "T2B",
+        "B2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "market comparison",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Better Than",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Better Than",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Better Than",
+          "column_index": 103,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Better Than",
+          "column_index": 7,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 39,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Better Than",
+          "column_index": 7,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 39,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Better Than",
+          "column_index": 7,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 39,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Better Than",
+          "column_index": 7,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 39,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Better Than",
+          "column_index": 7,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 39,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Better Than",
+          "column_index": 7,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 39,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Better Than",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "2b",
+      "question": "Initial Appeal (Want to try)",
+      "question_raw": "2b. Initial Appeal (Want to try)",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "Colian / Califia Farms / Hain Celestial",
+      "is_calculated": false,
+      "normalised": "initial appeal",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Initial Appeal",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 63,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Initial Appeal",
+          "column_index": 8,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 40,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Initial Appeal",
+          "column_index": 8,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 40,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Initial Appeal",
+          "column_index": 8,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 40,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Initial Appeal",
+          "column_index": 8,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 40,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Initial Appeal",
+          "column_index": 8,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 40,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Initial Appeal",
+          "column_index": 8,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Initial Appeal",
+          "column_index": 40,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "2e",
+      "question": "Appearance",
+      "question_raw": "2e. Appearance",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Tesco & PIE",
+      "clients": "Colian",
+      "is_calculated": false,
+      "normalised": "appearance",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Appearance",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Appearance",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Appearance",
+          "column_index": 9,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Appearance",
+          "column_index": 41,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Appearance",
+          "column_index": 9,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Appearance",
+          "column_index": 41,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Appearance",
+          "column_index": 9,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Appearance",
+          "column_index": 41,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Appearance",
+          "column_index": 9,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Appearance",
+          "column_index": 41,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Appearance",
+          "column_index": 9,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Appearance",
+          "column_index": 41,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Appearance",
+          "column_index": 9,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Appearance",
+          "column_index": 41,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_pre_2021",
+          "column": "MS \u00b7 Appearance",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 0.87
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "ffx_pre_2021",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "2f",
+      "question": "Aroma",
+      "question_raw": "2f. Aroma",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Tesco & PIE",
+      "clients": "Colian",
+      "is_calculated": false,
+      "normalised": "aroma",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Smell",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Smell",
+          "column_index": 65,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aroma",
+          "column_index": 10,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aroma",
+          "column_index": 42,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aroma",
+          "column_index": 10,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aroma",
+          "column_index": 42,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aroma",
+          "column_index": 10,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aroma",
+          "column_index": 42,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aroma",
+          "column_index": 10,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aroma",
+          "column_index": 42,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aroma",
+          "column_index": 10,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aroma",
+          "column_index": 42,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aroma",
+          "column_index": 10,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aroma",
+          "column_index": 42,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "3a",
+      "question": "Taste",
+      "question_raw": "3a. Taste",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Tesco & PIE",
+      "clients": "Colian",
+      "is_calculated": false,
+      "normalised": "taste",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Taste",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Taste",
+          "column_index": 66,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Taste",
+          "column_index": 11,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Taste",
+          "column_index": 43,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Taste",
+          "column_index": 11,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Taste",
+          "column_index": 43,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Taste",
+          "column_index": 11,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Taste",
+          "column_index": 43,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Taste",
+          "column_index": 11,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Taste",
+          "column_index": 43,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Taste",
+          "column_index": 11,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Taste",
+          "column_index": 43,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Taste",
+          "column_index": 11,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Taste",
+          "column_index": 43,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "3b",
+      "question": "Texture",
+      "question_raw": "3b. Texture",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Tesco & PIE",
+      "clients": "Colian",
+      "is_calculated": false,
+      "normalised": "texture",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Texture",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Texture",
+          "column_index": 67,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Texture",
+          "column_index": 12,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Texture",
+          "column_index": 44,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Texture",
+          "column_index": 12,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Texture",
+          "column_index": 44,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Texture",
+          "column_index": 12,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Texture",
+          "column_index": 44,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Texture",
+          "column_index": 12,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Texture",
+          "column_index": 44,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Texture",
+          "column_index": 12,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Texture",
+          "column_index": 44,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Texture",
+          "column_index": 12,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Texture",
+          "column_index": 44,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_pre_2021",
+          "column": "MS \u00b7 Texture/Mouthfeel",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.919
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "ffx_pre_2021",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "2d",
+      "question": "Packaging",
+      "question_raw": "2d. Packaging",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Tesco",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "packaging",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Packaging",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Packaging",
+          "column_index": 68,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Packaging",
+          "column_index": 13,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Packaging",
+          "column_index": 45,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Packaging",
+          "column_index": 13,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Packaging",
+          "column_index": 45,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Packaging",
+          "column_index": 13,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Packaging",
+          "column_index": 45,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Packaging",
+          "column_index": 13,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Packaging",
+          "column_index": 45,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Packaging",
+          "column_index": 13,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Packaging",
+          "column_index": 45,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Packaging",
+          "column_index": 13,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Packaging",
+          "column_index": 45,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "3c",
+      "question": "Health",
+      "question_raw": "3c. Health",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "health",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Health",
+          "column_index": 37,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Health",
+          "column_index": 69,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Health",
+          "column_index": 14,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Health",
+          "column_index": 46,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Health",
+          "column_index": 14,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Health",
+          "column_index": 46,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Health",
+          "column_index": 14,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Health",
+          "column_index": 46,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Health",
+          "column_index": 14,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Health",
+          "column_index": 46,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Health",
+          "column_index": 14,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Health",
+          "column_index": 46,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Health",
+          "column_index": 14,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Health",
+          "column_index": 46,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "3d",
+      "question": "Value for what you pay",
+      "question_raw": "3d. Value for what you pay",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "value for what you pay",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Value for Money",
+          "column_index": 38,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Value for Money",
+          "column_index": 70,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Value for Money",
+          "column_index": 15,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Value for Money",
+          "column_index": 47,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Value for Money",
+          "column_index": 15,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Value for Money",
+          "column_index": 47,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Value for Money",
+          "column_index": 15,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Value for Money",
+          "column_index": 47,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Value for Money",
+          "column_index": 15,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Value for Money",
+          "column_index": 47,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Value for Money",
+          "column_index": 15,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Value for Money",
+          "column_index": 47,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Value for Money",
+          "column_index": 15,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Value for Money",
+          "column_index": 47,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "3e",
+      "question": "Overall Quality (older data Impression)",
+      "question_raw": "3e. Overall Quality (older data Impression)",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Asda, Co-op, Tesco & PIE",
+      "clients": "Colian",
+      "is_calculated": false,
+      "normalised": "overall quality",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 39,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 71,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 16,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 48,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 16,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 48,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 16,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 48,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 16,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 48,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 16,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 48,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Overall Impression / Quality",
+          "column_index": 16,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Overall Impression / Quality",
+          "column_index": 48,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "2c",
+      "question": "Brand",
+      "question_raw": "2c. Brand",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "brand",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Brand",
+          "column_index": 40,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Brand",
+          "column_index": 72,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Brand",
+          "column_index": 17,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Brand",
+          "column_index": 49,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Brand",
+          "column_index": 17,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Brand",
+          "column_index": 49,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Brand",
+          "column_index": 17,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Brand",
+          "column_index": 49,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Brand",
+          "column_index": 17,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Brand",
+          "column_index": 49,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Brand",
+          "column_index": 17,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Brand",
+          "column_index": 49,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Brand",
+          "column_index": 17,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Brand",
+          "column_index": 49,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "1b",
+      "question": "Pre-Test Interest in Purchase",
+      "question_raw": "1b. Pre-Test Interest in Purchase",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Definitely / probably proportions",
+      "statistics": [
+        "MEAN",
+        "DEFPROB"
+      ],
+      "reports_needed_for": "",
+      "clients": "Colian / Califia Farms / Hain Celestial",
+      "is_calculated": false,
+      "normalised": "pre test interest in purchase",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 41,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Pre-Test Interest in Purchase",
+          "column_index": 18,
+          "variant": "MEAN",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "4a",
+      "question": "Full Price Post Test PI",
+      "question_raw": "4a. Full Price Post Test PI",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & all proportions",
+      "statistics": [
+        "MEAN",
+        "DIST"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "full price post test pi",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 42,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 74,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 19,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 51,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 19,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 51,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 19,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 51,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 19,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 51,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 19,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 51,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Full Price Post Test PI",
+          "column_index": 19,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Full Price Post Test PI",
+          "column_index": 51,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "4b",
+      "question": "25% Off PI",
+      "question_raw": "4b. 25% Off PI",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "25 off pi",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "25% Off PI",
+          "column_index": 43,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 75,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "50% Off PI",
+          "column_index": 44,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 76,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 0.889
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "4c",
+      "question": "50% Off PI",
+      "question_raw": "4c. 50% Off PI",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "50 off pi",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "50% Off PI",
+          "column_index": 44,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 76,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "50% Off PI",
+          "column_index": 21,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 50 Off PI",
+          "column_index": 53,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "25% Off PI",
+          "column_index": 43,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 75,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "25% Off PI",
+          "column_index": 20,
+          "variant": "MEAN",
+          "score": 0.889
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% 25 Off PI",
+          "column_index": 52,
+          "variant": "T2B",
+          "score": 0.889
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Aftertaste",
+      "question_raw": "Aftertaste",
+      "asked_of": "Drinks",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "Tesco & PIE",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "aftertaste",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Aftertaste",
+          "column_index": 45,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 77,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 54,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 54,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 54,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 54,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 54,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Aftertaste",
+          "column_index": 54,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_pre_2021",
+          "column": "MS \u00b7 Aftertaste",
+          "column_index": 22,
+          "variant": "MEAN",
+          "score": 0.87
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "ffx_pre_2021",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Refreshment",
+      "question_raw": "Refreshment",
+      "asked_of": "Drinks",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "refreshment",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Refreshment",
+          "column_index": 46,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Refreshment",
+          "column_index": 78,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Refreshment",
+          "column_index": 23,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Refreshment",
+          "column_index": 55,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Refreshment",
+          "column_index": 23,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Refreshment",
+          "column_index": 55,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Refreshment",
+          "column_index": 23,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Refreshment",
+          "column_index": 55,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Refreshment",
+          "column_index": 23,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Refreshment",
+          "column_index": 55,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Refreshment",
+          "column_index": 23,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Refreshment",
+          "column_index": 55,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Refreshment",
+          "column_index": 23,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Refreshment",
+          "column_index": 55,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Ease of Drinking",
+      "question_raw": "Ease of Drinking",
+      "asked_of": "Soft Drinks",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "ease of drinking",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Ease of Drinking",
+          "column_index": 47,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Ease of Drinking",
+          "column_index": 24,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Ease of Drinking",
+          "column_index": 24,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Ease of Drinking",
+          "column_index": 24,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Ease of Drinking",
+          "column_index": 24,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Ease of Drinking",
+          "column_index": 24,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Ease of Drinking",
+          "column_index": 24,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 79,
+          "variant": "T2B",
+          "score": 0.968
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 56,
+          "variant": "T2B",
+          "score": 0.968
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 56,
+          "variant": "T2B",
+          "score": 0.968
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 56,
+          "variant": "T2B",
+          "score": 0.968
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 56,
+          "variant": "T2B",
+          "score": 0.968
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 56,
+          "variant": "T2B",
+          "score": 0.968
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Ease of Dinking",
+          "column_index": 56,
+          "variant": "T2B",
+          "score": 0.968
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Strength of Flavour",
+      "question_raw": "Strength of Flavour",
+      "asked_of": "Hot Drinks",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "strength of flavour",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Strength of Flavour",
+          "column_index": 48,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 80,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Strength of Flavour",
+          "column_index": 25,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 57,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Strength of Flavour",
+          "column_index": 25,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 57,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Strength of Flavour",
+          "column_index": 25,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 57,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Strength of Flavour",
+          "column_index": 25,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 57,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Strength of Flavour",
+          "column_index": 25,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 57,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Strength of Flavour",
+          "column_index": 25,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Strength of Flavour",
+          "column_index": 57,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Image",
+      "question_raw": "Image",
+      "asked_of": "Drinks",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "image",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Image",
+          "column_index": 49,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Image",
+          "column_index": 81,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Image",
+          "column_index": 26,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Image",
+          "column_index": 58,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Image",
+          "column_index": 26,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Image",
+          "column_index": 58,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Image",
+          "column_index": 26,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Image",
+          "column_index": 58,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Image",
+          "column_index": 26,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Image",
+          "column_index": 58,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Image",
+          "column_index": 26,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Image",
+          "column_index": 58,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Image",
+          "column_index": 26,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Image",
+          "column_index": 58,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Label Design",
+      "question_raw": "Label Design",
+      "asked_of": "Drinks",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "label design",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Label Design",
+          "column_index": 50,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Label Design",
+          "column_index": 82,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Label Design",
+          "column_index": 27,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Label Design",
+          "column_index": 59,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Label Design",
+          "column_index": 27,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Label Design",
+          "column_index": 59,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Label Design",
+          "column_index": 27,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Label Design",
+          "column_index": 59,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Label Design",
+          "column_index": 27,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Label Design",
+          "column_index": 59,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Label Design",
+          "column_index": 27,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Label Design",
+          "column_index": 59,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Label Design",
+          "column_index": 27,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Label Design",
+          "column_index": 59,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Touch / Feel",
+      "question_raw": "Touch / Feel",
+      "asked_of": "Fresh Produce",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "touch / feel",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Touch / Feel",
+          "column_index": 51,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Touch / Feel",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Touch / Feel",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Touch / Feel",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Touch / Feel",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Touch / Feel",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Touch / Feel",
+          "column_index": 28,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 83,
+          "variant": "T2B",
+          "score": 0.909
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 0.909
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 0.909
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 0.909
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 0.909
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 0.909
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Touch/Feel",
+          "column_index": 60,
+          "variant": "T2B",
+          "score": 0.909
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Freshness",
+      "question_raw": "Freshness",
+      "asked_of": "Fresh Produce",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "freshness",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Freshness",
+          "column_index": 52,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Freshness",
+          "column_index": 84,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Freshness",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Freshness",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Freshness",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Freshness",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Freshness",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Freshness",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Freshness",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Freshness",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Freshness",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Freshness",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Freshness",
+          "column_index": 29,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Freshness",
+          "column_index": 61,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Colour",
+      "question_raw": "Colour",
+      "asked_of": "Fresh Produce",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "colour",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Colour",
+          "column_index": 53,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Colour",
+          "column_index": 85,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Colour",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Colour",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Colour",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Colour",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Colour",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Colour",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Colour",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Colour",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Colour",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Colour",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Colour",
+          "column_index": 30,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Colour",
+          "column_index": 62,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "9",
+      "question": "Star Rating",
+      "question_raw": "9. Star Rating",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 2 Box",
+      "statistics": [
+        "T2B",
+        "MEAN"
+      ],
+      "reports_needed_for": "PIE",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "star rating",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Star Rating",
+          "column_index": 55,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "T2B% Star Rating",
+          "column_index": 87,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Star Rating",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Star Rating",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Star Rating",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Star Rating",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Star Rating",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Star Rating",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Star Rating",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Star Rating",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Star Rating",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Star Rating",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Star Rating",
+          "column_index": 32,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "T2B% Star Rating",
+          "column_index": 64,
+          "variant": "T2B",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN",
+        "T2B"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "8",
+      "question": "Recommend to a friend",
+      "question_raw": "8. Recommend to a friend",
+      "asked_of": "All",
+      "statistics_raw": "Mean score & Top 4 Box",
+      "statistics": [
+        "T4B",
+        "MEAN"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "recommend to a friend",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Recommend to a friend",
+          "column_index": 54,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "Product Promoter Score",
+          "column_index": 56,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Recommend to a friend",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Product Promoter Score",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Recommend to a friend",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Product Promoter Score",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Recommend to a friend",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Product Promoter Score",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Recommend to a friend",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Product Promoter Score",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Recommend to a friend",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Product Promoter Score",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Recommend to a friend",
+          "column_index": 31,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Product Promoter Score",
+          "column_index": 33,
+          "variant": "MEAN",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "5",
+      "question": "Frequency of purchase",
+      "question_raw": "5. Frequency of purchase",
+      "asked_of": "All",
+      "statistics_raw": "All proportions & Mean Score",
+      "statistics": [
+        "MEAN",
+        "DIST"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": false,
+      "normalised": "frequency of purchase",
+      "physical_columns": [],
+      "mapped": false,
+      "variants_available": [],
+      "tables": []
+    },
+    {
+      "question_code": "",
+      "question": "Overall Score Weight",
+      "question_raw": "Overall Score Weight",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "overall score weight",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Overall Score Weight",
+          "column_index": 107,
+          "variant": "MEAN",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Relevance Score Weight",
+      "question_raw": "Relevance Score Weight",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "relevance score weight",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Relevance Score Weight",
+          "column_index": 108,
+          "variant": "MEAN",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Unweighted Relevance Score (2dcp)",
+      "question_raw": "Unweighted Relevance Score (2dcp)",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "unweighted relevance score",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Unweighted Relevance Score (2dcp)",
+          "column_index": 109,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 110,
+          "variant": "MEAN",
+          "score": 0.96
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 0.96
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 0.96
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 0.96
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 0.96
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 0.96
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 0.96
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Weighted Relevance Score",
+      "question_raw": "Weighted Relevance Score",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "weighted relevance score",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 110,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Relevance Score",
+          "column_index": 82,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "Unweighted Relevance Score (2dcp)",
+          "column_index": 109,
+          "variant": "MEAN",
+          "score": 0.96
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Unweighted Overall Score (2dcp)",
+      "question_raw": "Unweighted Overall Score (2dcp)",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "unweighted overall score",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 57,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "Weighted Overall Score",
+          "column_index": 58,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 0.957
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Weighted Overall Score",
+      "question_raw": "Weighted Overall Score",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "weighted overall score",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Weighted Overall Score",
+          "column_index": 58,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Weighted Overall Score",
+          "column_index": 35,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "norm_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 57,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 0.957
+        },
+        {
+          "table": "ffx_data",
+          "column": "Unweighted Overall Score (2dcp)",
+          "column_index": 34,
+          "variant": "MEAN",
+          "score": 0.957
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    },
+    {
+      "question_code": "",
+      "question": "Grocer Innovation Score",
+      "question_raw": "Grocer Innovation Score",
+      "asked_of": "All",
+      "statistics_raw": "Calculcation",
+      "statistics": [
+        "CALC"
+      ],
+      "reports_needed_for": "",
+      "clients": "",
+      "is_calculated": true,
+      "normalised": "grocer innovation score",
+      "physical_columns": [
+        {
+          "table": "norm_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 59,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        },
+        {
+          "table": "ffx_data",
+          "column": "Grocer Innovation Score",
+          "column_index": 36,
+          "variant": "MEAN",
+          "score": 1.0
+        }
+      ],
+      "mapped": true,
+      "variants_available": [
+        "MEAN"
+      ],
+      "tables": [
+        "ffx_data",
+        "norm_data"
+      ]
+    }
+  ]
+}

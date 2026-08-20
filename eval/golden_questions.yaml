@@ -1,0 +1,434 @@
+# ===========================================================================
+# F!S Internal GPT · golden question set  (draft v0.1 — for kickoff sign-off)
+#
+# 60 questions across four routes. Every question here is answerable (or
+# correctly refusable) against data that is ACTUALLY PRESENT in the corpus as
+# of the Phase 1 audit — nothing references Future Food or Appetite Shift,
+# which have not been delivered.
+#
+# Written by: Phase 1 profiling run, seeded from real values in the data.
+# Needs: one reviewer each from insight, innovation and client-facing (Q6 of
+#        the kickoff list) to correct the wording and add what is missing.
+#
+# route:      document | measure | hybrid | refuse
+# expects:    substrings/values a correct answer must contain
+# ground_truth: SQL against curated.* that produces the verifiable figure
+# must_cite:  the answer must cite at least one of these sources
+# ===========================================================================
+
+meta:
+  version: "0.1-draft"
+  created: "2026-08-20"
+  corpus_snapshot: "FoodFax only — Sets 26-32 (2025) + archive to 2024"
+  status: "AWAITING F!S SIGN-OFF"
+  ship_gates:
+    numeric_exactness_pct: 95
+    citation_precision_pct: 90
+    fabricated_sources: 0
+    retrieval_recall_at_10_pct: 85
+    correct_refusal_pct: 95
+
+# ---------------------------------------------------------------------------
+# DOCUMENT LOOKUPS (20) — answered from the vector index
+# ---------------------------------------------------------------------------
+questions:
+
+  - id: D01
+    route: document
+    question: "What did reviewers say about the texture of the Jacob's Red Leicester Flavour Bites?"
+    expects: ["crunch", "texture"]
+    must_cite: ["240517.pdf"]
+
+  - id: D02
+    route: document
+    question: "Summarise the negative feedback on Bio & Me Good Gut Puffs."
+    expects: ["expensive", "aftertaste"]
+    must_cite: ["240556.pdf"]
+    notes: "Scored 30/50 against a category average of 41 — price is the dominant complaint."
+
+  - id: D03
+    route: document
+    question: "Which category awards did the Plant based Boursin win, and at what percentages?"
+    expects: ["VEGAN ACCOMPANIMENTS"]
+    must_cite: ["240555.pdf"]
+
+  - id: D04
+    route: document
+    question: "What are shoppers saying about price across Set 26?"
+    expects: ["expensive", "good price"]
+    must_cite: ["Set 26"]
+    notes: "Should surface both directions, not only complaints."
+
+  - id: D05
+    route: document
+    question: "Find every product where reviewers mentioned the smell being off-putting."
+    expects: ["smell", "off putting"]
+    must_cite: ["240517.pdf"]
+
+  - id: D06
+    route: document
+    question: "What did people say about the Mac 'N' Cheese Head Macaroni?"
+    expects: []
+    must_cite: ["240524.pdf"]
+    notes: "Worst performer in Set 26 at 12/50 against a 31 average. Answer must not soften this."
+
+  - id: D07
+    route: document
+    question: "Which products in Set 28 got a Value award on pack?"
+    expects: []
+    must_cite: ["Set 28"]
+    notes: "Should list the product names that got Value awards. SQL returns boolean, answer should name the products."
+
+  - id: D08
+    route: document
+    question: "What is the FoodFax methodology — how is the score out of 50 arrived at?"
+    expects: []
+    must_cite: ["Foodfax Database details.xlsx"]
+    notes: "Tests whether the measure dictionary is reachable as a document, not just as SQL."
+
+  - id: D09
+    route: document
+    question: "Show me the reviewer comments for the five-star raters of the Quorn Smokey BBQ Filled Bites."
+    expects: []
+    must_cite: ["240559.pdf"]
+
+  - id: D10
+    route: document
+    question: "What themes come up in verbatims about vegan and plant-based products?"
+    expects: ["vegan"]
+    must_cite: ["240553.pdf", "240555.pdf"]
+
+  - id: D11
+    route: document
+    question: "Which report templates does F!S produce for a FoodFax session?"
+    expects: ["Tables", "Reports"]
+    must_cite: ["REPORT TEMPLATES"]
+
+  - id: D12
+    route: document
+    question: "What did reviewers say about packaging design in Set 27?"
+    expects: []
+    must_cite: ["Set 27"]
+
+  - id: D13
+    route: document
+    question: "Summarise the taste feedback for Coca Cola Zero Sugar Lime."
+    expects: []
+    must_cite: ["240560.pdf"]
+
+  - id: D14
+    route: document
+    question: "Which measures does the FoodFax questionnaire only ask of drinks?"
+    expects: ["Aftertaste", "Refreshment", "Image", "Label Design"]
+    must_cite: ["Foodfax Database details.xlsx"]
+
+  - id: D15
+    route: document
+    question: "What measures are only asked of fresh produce?"
+    expects: ["Touch / Feel", "Freshness", "Colour"]
+    must_cite: ["Foodfax Database details.xlsx"]
+
+  - id: D16
+    route: document
+    question: "Which measures does Tesco specifically require in their reports?"
+    expects: ["Appearance", "Aroma", "Taste", "Texture"]
+    must_cite: ["Foodfax Database details.xlsx"]
+
+  - id: D17
+    route: document
+    question: "Find comments where someone said a product reminded them of another brand."
+    expects: []
+    must_cite: []
+
+  - id: D18
+    route: document
+    question: "What did shoppers think of the M&S YAY! Vanilla Mushroom Latte?"
+    expects: []
+    must_cite: ["240554.pdf"]
+    notes: "Functional-mushroom drink — a trend product. Check the answer captures ambivalence."
+
+  - id: D19
+    route: document
+    question: "Which products had reviewers complaining about the product being too sweet?"
+    expects: ["too sweet"]
+    must_cite: ["240611.pdf"]
+
+  - id: D20
+    route: document
+    question: "What preference reasons did people give when picking their favourite product in Set 26?"
+    expects: []
+    must_cite: ["Tables set 26"]
+    notes: "Actual filename is 'FFX Tables set 26.xlsx'. Citation check uses substring match."
+
+# ---------------------------------------------------------------------------
+# MEASURE QUERIES (20) — answered by SQL, hand-verifiable
+# ---------------------------------------------------------------------------
+
+  - id: M01
+    route: measure
+    question: "How many product tests do we have in the FoodFax database in total?"
+    ground_truth: "SELECT count(*) FROM curated.product_test_v;"
+    expects_value: 25914
+    notes: "13,278 historic + 6,770 norm + 5,807 pre-2021 + 59 session PDFs = 25,914 total."
+
+  - id: M02
+    route: measure
+    question: "What years does the FoodFax data cover?"
+    ground_truth: "SELECT min(test_year), max(test_year) FROM curated.product_test_v;"
+    expects_value: [2002, 2025]
+
+  - id: M03
+    route: measure
+    question: "How many distinct categories have we ever tested in?"
+    ground_truth: "SELECT count(DISTINCT category_name) FROM curated.product_test_v;"
+    expects_value: 464
+
+  - id: M04
+    route: measure
+    question: "How many manufacturers are in the database?"
+    ground_truth: "SELECT count(DISTINCT manufacturer_name) FROM curated.product_test_v;"
+    expects_value: 2367
+
+  - id: M05
+    route: measure
+    question: "Which categories have we tested most often?"
+    ground_truth: |
+      SELECT category_name, count(*) n FROM curated.product_test_v
+      GROUP BY 1 ORDER BY n DESC LIMIT 10;
+    expects: ["World Cooking Sauces"]
+    notes: "World Cooking Sauces leads the historic table at 267."
+
+  - id: M06
+    route: measure
+    question: "Which categories have we tested least in the last five years?"
+    ground_truth: |
+      SELECT category_name, count(*) n FROM curated.product_test_v
+      WHERE test_year >= 2020 GROUP BY 1 ORDER BY n ASC LIMIT 20;
+    notes: "The commercial question behind this is where the norms are getting thin."
+
+  - id: M07
+    route: measure
+    question: "How does Taste score for own-label versus branded products?"
+    ground_truth: |
+      SELECT own_label_or_brand, round(avg(value),3) FROM curated.measure_value_v
+      WHERE measure_name = 'Taste' AND variant = 'MEAN' GROUP BY 1;
+    notes: "Must report base sizes and must not mix attribute scales."
+
+  - id: M08
+    route: measure
+    question: "Has Value for Money improved or declined since 2016?"
+    ground_truth: |
+      SELECT test_year, round(avg(value),3), count(*) FROM curated.measure_value_v
+      WHERE measure_name = 'Value for Money' AND variant = 'MEAN'
+        AND test_year >= 2016 GROUP BY 1 ORDER BY 1;
+    expects_chart: true
+
+  - id: M09
+    route: measure
+    question: "What is the average Taste mean score across the whole database?"
+    ground_truth: |
+      SELECT round(avg(value),4) FROM curated.measure_value_v
+      WHERE measure_name = 'Taste' AND variant = 'MEAN';
+    expects: ["3.82"]
+    notes: "Avg across all sources is 3.8204. Accept 3.82 or 3.8204 — model may round."
+
+  - id: M10
+    route: measure
+    question: "Everything we have ever tested for Quorn."
+    ground_truth: |
+      SELECT product_name, test_year, category_name FROM curated.product_test_v
+      WHERE manufacturer_name ILIKE '%Quorn%' ORDER BY test_year DESC;
+
+  - id: M11
+    route: measure
+    question: "Which products in 2025 beat their category average?"
+    ground_truth: |
+      SELECT product_name, score_out_of_50, category_average, vs_category_norm
+      FROM curated.session_report_v WHERE vs_category_norm > 0
+      ORDER BY vs_category_norm DESC;
+    expects_value: 14
+    notes: "14 of the 59 parsed 2025 session reports beat their category norm."
+
+  - id: M12
+    route: measure
+    question: "What was the worst-performing product in Set 26 and by how much did it miss the norm?"
+    ground_truth: |
+      SELECT product_name, score_out_of_50, category_average, vs_category_norm
+      FROM curated.session_report_v WHERE session_set = 'Set 26'
+      ORDER BY vs_category_norm ASC LIMIT 1;
+    expects: ["Mac 'N' Cheese Head"]
+    expects_value: -19
+
+  - id: M13
+    route: measure
+    question: "Which manufacturers appear most often in the last five years?"
+    ground_truth: |
+      SELECT manufacturer_name, count(*) n FROM curated.product_test_v
+      WHERE test_year >= 2020 GROUP BY 1 ORDER BY n DESC LIMIT 15;
+
+  - id: M14
+    route: measure
+    question: "How many products have we tested per year since 2016?"
+    ground_truth: |
+      SELECT test_year, count(*) FROM curated.product_test_v
+      WHERE test_year >= 2016 GROUP BY 1 ORDER BY 1;
+    expects_chart: true
+    notes: "Ground truth from Current Norm Summary: 2016=1667 2017=1473 2018=1693 2019=828 2020=145 2021=192 2022=282 2023=232 2024=258."
+
+  - id: M15
+    route: measure
+    question: "What is the split between Premium and Standard/Value products?"
+    ground_truth: |
+      SELECT tier, count(*) FROM curated.product_test_v GROUP BY 1;
+    notes: "Current Norm Summary totals: 2,672 Premium, 4,098 Standard & Value."
+
+  - id: M16
+    route: measure
+    question: "Which retailers do we have the most own-label products from?"
+    ground_truth: |
+      SELECT manufacturer_name, count(*) n FROM curated.product_test_v
+      WHERE own_label_or_brand = 'Own Label' GROUP BY 1 ORDER BY n DESC LIMIT 15;
+
+  - id: M17
+    route: measure
+    question: "Which demographic over-indexes on noticing the Bio & Me Good Gut Puffs?"
+    ground_truth: |
+      SELECT banner_group, banner_level, pct, base_n FROM curated.crosstab_v
+      WHERE cmr_ref = '240556' AND question_text ILIKE 'Notice%'
+        AND response_option = 'Top 2 box' ORDER BY pct DESC;
+    notes: "Must flag base sizes — several banner cells are n < 15."
+
+  - id: M18
+    route: measure
+    question: "How many products were tested in each session set in 2025?"
+    ground_truth: |
+      SELECT session_set, count(*) FROM curated.session_report_v
+      GROUP BY 1 ORDER BY 1;
+    notes: "Sets 26-32. Set 32 has 1 report because the rest failed to download."
+
+  - id: M19
+    route: measure
+    question: "What is the average price of products we tested in 2025, by storage type?"
+    ground_truth: |
+      SELECT storage, round(avg(price_gbp),2), count(*) FROM curated.product_test_v
+      WHERE test_year = 2025 GROUP BY 1;
+
+  - id: M20
+    route: measure
+    question: "Which project types are in the database and how many tests does each have?"
+    ground_truth: |
+      SELECT project_type, count(*) n FROM curated.product_test_v
+      GROUP BY 1 ORDER BY n DESC;
+    expects: ["FFX", "GOLA", "NPA", "BEA", "GAS", "OMNI"]
+    notes: "Historic Products: FFX 6419, GOLA 5891, NPA 702, BEA 259, GAS 6, OMNI 1."
+
+# ---------------------------------------------------------------------------
+# HYBRID (10) — need both a measure query and document retrieval
+# ---------------------------------------------------------------------------
+
+  - id: H01
+    route: hybrid
+    question: "Draft a client summary for Set 26 — scores, awards and the standout verbatims."
+    expects: []
+    notes: "The headline deliverable. Should read like the existing report template."
+
+  - id: H02
+    route: hybrid
+    question: "Which products beat their category norm in 2025, and what did reviewers credit for it?"
+    expects: []
+
+  - id: H03
+    route: hybrid
+    question: "We're pitching a vegan range. What have we learned from vegan products we've tested?"
+    expects: ["Squeaky Bean", "Boursin"]
+    notes: "The classic 'find me relevant past work' question from the brief."
+
+  - id: H04
+    route: hybrid
+    question: "Compare how Walkers products have performed against the crisps category norm."
+    expects: []
+
+  - id: H05
+    route: hybrid
+    question: "Is price a bigger driver of poor scores than taste in our 2025 data?"
+    expects: []
+    notes: "Tests whether the tool separates 'the verbatims say X' from 'the data shows X'."
+
+  - id: H06
+    route: hybrid
+    question: "Which functional or better-for-you products have we tested, and how did they land?"
+    expects: []
+
+  - id: H07
+    route: hybrid
+    question: "Give me a one-page brief on the Cereals category — how many tests, average scores, and typical feedback."
+    expects: ["Cereals"]
+
+  - id: H08
+    route: hybrid
+    question: "What's the relationship between price and score in the 2025 sets?"
+    expects_chart: true
+
+  - id: H09
+    route: hybrid
+    question: "Show me the highest scoring products of 2025 with their pack shots and top verbatims."
+    expects: []
+
+  - id: H10
+    route: hybrid
+    question: "Which categories are we strongest in — most tests plus best average performance?"
+    expects_chart: true
+
+# ---------------------------------------------------------------------------
+# MUST REFUSE (10) — the tool has to know what it does not know
+# ---------------------------------------------------------------------------
+
+  - id: R01
+    route: refuse
+    question: "Which clients should we upsell next quarter?"
+    refuse_because: "No sales, revenue or CRM data in scope. Named as a Phase 2 ambition in the credentials deck."
+
+  - id: R02
+    route: refuse
+    question: "What did the Future Food Trend Tracker say about GLP-1 in Q4 2025?"
+    refuse_because: "Future Food data failed to download — 62 files, zero bytes. Must say so, not improvise from general knowledge."
+
+  - id: R03
+    route: refuse
+    question: "Summarise the Appetite Shift GLP-1 immersion study findings."
+    refuse_because: "Appetite Shift data is entirely absent from the corpus."
+
+  - id: R04
+    route: refuse
+    question: "What was in Set 30?"
+    refuse_because: "Set 30 is in the failed-download manifest. The gap must be named, not filled."
+
+  - id: R05
+    route: refuse
+    question: "Which client commissioned project Granville?"
+    refuse_because: "Project code names are unmapped to clients until kickoff Q4 is answered. Must not guess."
+
+  - id: R06
+    route: refuse
+    question: "What is our day rate for a product testing session?"
+    refuse_because: "Commercial content is tagged and excluded from default retrieval."
+
+  - id: R07
+    route: refuse
+    question: "How will the crisps category perform next year?"
+    refuse_because: "Forecasting is not a retrieval question. May describe the historic trend, must not predict."
+
+  - id: R08
+    route: refuse
+    question: "Compare the Taste score of a 2010 product on the 9-point scale with a 2023 product on the 5-point scale."
+    refuse_because: "Cross-scale comparison is invalid. Must refuse the comparison while still reporting each score with its scale."
+
+  - id: R09
+    route: refuse
+    question: "Give me the contact details of the panellists who reviewed 240517."
+    refuse_because: "Panellist PII. Scrubbed at ingest and never retrievable."
+
+  - id: R10
+    route: refuse
+    question: "What do Tesco's own internal category reviews say about this?"
+    refuse_because: "Not F!S data and not in the corpus."

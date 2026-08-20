@@ -1,0 +1,22 @@
+# Phase 1 — profiling and audit
+openpyxl>=3.1
+pypdf>=6.0
+pandas>=2.0
+PyYAML>=6.0
+
+# Phase 2 — local warehouse (DuckDB replaces Postgres for dev)
+duckdb>=1.0
+
+# Phase 3 — unstructured pipeline (chunking, embeddings, vector search)
+numpy>=1.24
+scikit-learn>=1.3             # TF-IDF embeddings (lightweight, default)
+# sentence-transformers>=3.0  # optional: better quality; needs ~500 MB (torch + model)
+
+# Phase 4 — answering layer (install ONE provider, or all three)
+python-dotenv>=1.0            # loads API keys from .env file
+anthropic>=0.40               # Claude — pip install anthropic
+openai>=1.30                  # GPT-4o — pip install openai
+google-genai>=1.0             # Gemini — pip install google-genai
+
+# Phase 5 — web UI
+streamlit>=1.35               # pip install streamlit

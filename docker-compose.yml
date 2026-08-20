@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  fis-gpt:
+    build: .
+    container_name: fis-gpt
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      # Mount the pre-built database + embeddings
+      - ./out:/app/out:ro
+      # Mount corpus data (read-only) if you want to run refresh inside container
+      # - ../Fis Group:/data/corpus:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
