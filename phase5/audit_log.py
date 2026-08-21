@@ -9,21 +9,30 @@ Queryable via the Data Explorer or directly in DuckDB.
 from __future__ import annotations
 
 import json
+import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 import duckdb
 
 
-_DB_PATH = Path(__file__).resolve().parent.parent / "out" / "fis_audit.duckdb"
+def _db_path() -> str:
+    """Return the audit database path — writable location."""
+    # Prefer the out/ folder next to the code
+    code_dir = Path(__file__).resolve().parent.parent
+    out_dir = code_dir / "out"
+    if out_dir.exists():
+        return str(out_dir / "fis_audit.duckdb")
+    # Fallback: system temp (works on Streamlit Cloud)
+    return str(Path(tempfile.gettempdir()) / "fis_audit.duckdb")
 
 
 def _connect():
     """Get a connection to the audit database (creates it if needed)."""
-    con = duckdb.connect(str(_DB_PATH))
+    con = duckdb.connect(_db_path())
     con.execute("""
         CREATE TABLE IF NOT EXISTS audit_log (
-            id          INTEGER PRIMARY KEY DEFAULT nextval('audit_seq'),
             ts          TIMESTAMP NOT NULL,
             question    TEXT NOT NULL,
             answer      TEXT,
@@ -35,11 +44,6 @@ def _connect():
             elapsed_s   REAL
         )
     """)
-    # Create sequence if it doesn't exist
-    try:
-        con.execute("CREATE SEQUENCE IF NOT EXISTS audit_seq START 1")
-    except Exception:
-        pass
     return con
 
 
@@ -74,9 +78,10 @@ def log_query(
             ],
         )
         con.close()
-    except Exception:
-        # Never let logging failures break the app
-        pass
+    except Exception as e:
+        # Log to stderr so it shows in Streamlit Cloud logs
+        import sys
+        print(f"[audit_log] write failed: {e}", file=sys.stderr)
 
 
 def get_recent(limit: int = 50) -> list[dict]:
