@@ -325,13 +325,52 @@ def _tab_measures():
 
 # ── page entry point ──────────────────────────────────────────────────
 
+def _tab_audit_log():
+    st.markdown("#### 📋 Query Audit Log")
+    st.caption("Every question asked and answer given, with traceability.")
+
+    from phase5.audit_log import get_recent, get_stats
+
+    stats = get_stats()
+    if stats.get("total_queries", 0) > 0:
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Total queries", f"{stats['total_queries']:,}")
+        c2.metric("Total tokens", f"{stats['total_tokens']:,}")
+        c3.metric("Avg response", f"{stats['avg_elapsed']}s")
+        st.caption(f"First query: {stats['first_query']}  ·  Last: {stats['last_query']}")
+        st.divider()
+
+    entries = get_recent(limit=100)
+    if not entries:
+        st.info("No queries logged yet. Ask a question in the Chat page to start the log.")
+        return
+
+    df = pd.DataFrame(entries)
+    st.dataframe(
+        df,
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "timestamp": st.column_config.TextColumn("Time", width="medium"),
+            "question": st.column_config.TextColumn("Question", width="large"),
+            "answer": st.column_config.TextColumn("Answer (preview)", width="large"),
+            "model": "Model",
+            "tokens": "Tokens",
+            "rounds": "Rounds",
+            "elapsed_s": st.column_config.NumberColumn("Time (s)", format="%.1f"),
+        },
+    )
+    st.caption(f"Showing {len(entries)} most recent queries")
+
+
 def render():
     """Main render function called by st.navigation."""
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🛒 Products",
         "📁 Categories",
         "🗂️ 2025 Sessions",
         "📐 Measures",
+        "📋 Audit Log",
     ])
 
     with tab1:
@@ -342,3 +381,5 @@ def render():
         _tab_sessions()
     with tab4:
         _tab_measures()
+    with tab5:
+        _tab_audit_log()

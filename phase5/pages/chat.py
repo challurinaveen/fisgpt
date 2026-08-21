@@ -16,6 +16,7 @@ import streamlit as st
 
 from phase4 import answerer
 from phase4.providers import get_provider
+from phase5.audit_log import log_query
 
 
 # ── sample questions ──────────────────────────────────────────────────
@@ -170,7 +171,7 @@ def _generate_answer(question: str):
                             language="json",
                         )
 
-            # Save
+            # Save to session
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": answer_text,
@@ -179,6 +180,18 @@ def _generate_answer(question: str):
             })
             st.session_state.total_tokens += tokens
             st.session_state.total_queries += 1
+
+            # Persist to audit log
+            log_query(
+                question=question,
+                answer=answer_text,
+                tool_calls=result["tool_calls"],
+                model=result["model"],
+                provider=result["provider"],
+                tokens=tokens,
+                rounds=result["rounds"],
+                elapsed_s=elapsed,
+            )
 
         except Exception as e:
             elapsed = time.time() - t0
