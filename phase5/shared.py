@@ -141,7 +141,7 @@ def init_state():
     """Set up session state defaults (idempotent)."""
     defaults = {
         "messages": [],
-        "provider_key": detect_default_provider(),
+        "provider_key": "gpt-4o-mini",
         "verbose": False,
         "total_tokens": 0,
         "total_queries": 0,
@@ -167,25 +167,6 @@ def render_sidebar():
         )
         st.caption("Food Insight & Strategy")
         st.divider()
-
-        # Model selection
-        st.markdown('<p class="sidebar-header">Model</p>', unsafe_allow_html=True)
-        available = get_available_models()
-        labels = [m[0] for m in available]
-        keys = [m[1] for m in available]
-
-        current_idx = 0
-        if st.session_state.provider_key in keys:
-            current_idx = keys.index(st.session_state.provider_key)
-
-        selected = st.selectbox(
-            "Select model",
-            range(len(available)),
-            index=current_idx,
-            format_func=lambda i: labels[i],
-            label_visibility="collapsed",
-        )
-        st.session_state.provider_key = keys[selected]
 
         st.divider()
 
