@@ -10,9 +10,10 @@ from pathlib import Path
 # --------------------------------------------------------------------------
 # Roots
 # --------------------------------------------------------------------------
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_THIS_DIR = Path(__file__).resolve().parent          # wherever this repo lives
+PROJECT_ROOT = _THIS_DIR.parent                       # parent (for corpus access)
 CORPUS_ROOT = PROJECT_ROOT / "Fis Group"
-OUT_DIR = PROJECT_ROOT / "fis-gpt" / "out"
+OUT_DIR = _THIS_DIR / "out"                           # always <repo>/out
 
 # The live copy. `Archive/` is a byte-identical duplicate (Finding D) and is
 # excluded from ingest, but still walked by the inventory so we can *prove*
