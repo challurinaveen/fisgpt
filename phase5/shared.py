@@ -159,10 +159,20 @@ def render_sidebar():
     init_state()
 
     with st.sidebar:
-        # Branding
+        # Branding — logo + title
+        import base64
+        from pathlib import Path
+        logo_path = Path(__file__).resolve().parent.parent / "f_s_group_logo.jpg"
+        if logo_path.exists():
+            logo_b64 = base64.b64encode(logo_path.read_bytes()).decode()
+            st.markdown(
+                f'<div style="text-align:center;margin-bottom:0.5rem">'
+                f'<img src="data:image/jpeg;base64,{logo_b64}" '
+                f'style="width:160px;border-radius:8px" /></div>',
+                unsafe_allow_html=True,
+            )
         st.markdown(
-            f'<h2 style="color:{BRAND["primary"]};margin-bottom:0">'
-            f'🍽️ F!S Internal GPT</h2>',
+            '<h3 style="text-align:center;margin:0">Internal GPT</h3>',
             unsafe_allow_html=True,
         )
         st.caption("Food Insight & Strategy")
