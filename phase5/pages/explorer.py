@@ -333,11 +333,9 @@ def _tab_audit_log():
 
     stats = get_stats()
     if stats.get("total_queries", 0) > 0:
-        c1, c2, c3 = st.columns(3)
+        c1, c2 = st.columns(2)
         c1.metric("Total queries", f"{stats['total_queries']:,}")
         c2.metric("Total tokens", f"{stats['total_tokens']:,}")
-        c3.metric("Avg response", f"{stats['avg_elapsed']}s")
-        st.caption(f"First query: {stats['first_query']}  ·  Last: {stats['last_query']}")
         st.divider()
 
     entries = get_recent(limit=100)
@@ -346,6 +344,9 @@ def _tab_audit_log():
         return
 
     df = pd.DataFrame(entries)
+    # Drop response-time column — not useful for display
+    if "elapsed_s" in df.columns:
+        df = df.drop(columns=["elapsed_s"])
     st.dataframe(
         df,
         use_container_width=True,
@@ -357,7 +358,6 @@ def _tab_audit_log():
             "model": "Model",
             "tokens": "Tokens",
             "rounds": "Rounds",
-            "elapsed_s": st.column_config.NumberColumn("Time (s)", format="%.1f"),
         },
     )
     st.caption(f"Showing {len(entries)} most recent queries")

@@ -11,8 +11,9 @@ Internal AI tool for **F!S Group** — asks questions about 30+ years of FoodFax
 | Page | What you get |
 |------|-------------|
 | **💬 Chat** | Ask anything in plain English. The AI queries the database and searches documents, then answers with source citations. |
-| **🔍 Data Explorer** | Browse products, categories, 2025 session results, and measures with filters — no SQL needed. |
+| **🔍 Data Explorer** | Browse products, categories, 2025 session results, measures, and the audit log — no SQL needed. |
 | **📊 Dashboard** | Charts and metrics across the full test history: tests per year, top categories, brand vs own-label, scores. |
+| **📋 Audit Log** | Every query and answer is automatically logged with timestamp, model used, tool calls, tokens, and response time. Viewable in Data Explorer → Audit Log tab. |
 
 ---
 
@@ -119,13 +120,15 @@ fis-gpt/
 ├── phase5/            Streamlit web UI
 │   ├── app.py           Entry point
 │   ├── auth.py          Password authentication
+│   ├── audit_log.py     Query audit logging (DuckDB-backed)
 │   ├── shared.py        Sidebar, branding, DB helpers
 │   └── pages/
 │       ├── chat.py      Chat interface
-│       ├── explorer.py  Data Explorer (4 tabs)
+│       ├── explorer.py  Data Explorer (5 tabs incl. Audit Log)
 │       └── dashboard.py Dashboard with charts
 ├── eval/              60-question evaluation suite
 ├── out/               Pre-built database + embeddings (tracked in git)
+│   └── fis_audit.duckdb  Auto-generated audit log (not tracked)
 ├── config.py          Corpus paths and known-shape registry
 ├── run_refresh.py     Full data rebuild script
 ├── requirements.txt
@@ -135,17 +138,35 @@ fis-gpt/
 
 ---
 
-## LLM providers
+## LLM provider
 
-Configure at least one in `.env` (or Streamlit Cloud secrets):
+The app uses **OpenAI gpt-4o-mini** as the default model. Set the API key in `.env` or Streamlit Cloud secrets:
 
-| Provider | Models | Env variable |
-|----------|--------|-------------|
-| OpenAI | gpt-4o-mini, gpt-4o | `OPENAI_API_KEY` |
-| Anthropic | Claude Sonnet, Opus | `ANTHROPIC_API_KEY` |
-| Google | Gemini Pro, Flash | `GOOGLE_API_KEY` |
+```
+OPENAI_API_KEY=sk-...
+```
 
-The sidebar auto-detects which are available.
+Other providers (Anthropic, Google) are supported in the codebase but not exposed in the UI.
+
+---
+
+## Audit Log
+
+Every question asked through the Chat page is automatically logged to a separate DuckDB file (`out/fis_audit.duckdb`). Each entry records:
+
+| Field | Description |
+|-------|-------------|
+| Timestamp | When the question was asked (UTC) |
+| Question | The user's question |
+| Answer | The AI's response |
+| Tool calls | SQL queries and document searches used |
+| Model | Which LLM model answered |
+| Tokens | Total tokens consumed |
+| Rounds | Number of tool-use rounds |
+
+View the log in **Data Explorer → 📋 Audit Log** tab.
+
+> **Note:** On Streamlit Community Cloud the filesystem resets on each reboot, so the audit log will clear when the app restarts. For persistent logging, deploy via Docker with a mounted volume.
 
 ---
 
