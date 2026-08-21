@@ -168,8 +168,6 @@ def render_sidebar():
         st.caption("Food Insight & Strategy")
         st.divider()
 
-        st.divider()
-
         # Database stats
         st.markdown('<p class="sidebar-header">Database</p>', unsafe_allow_html=True)
         try:

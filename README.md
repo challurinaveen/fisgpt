@@ -171,5 +171,3 @@ The sidebar auto-detects which are available.
 ---
 
 *F!S Group · FoodFax product testing · Internal use only*
-"# fis-gpt" 
-"# fis-gpt" 
