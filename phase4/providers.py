@@ -93,7 +93,7 @@ class AnthropicProvider(LLMProvider):
         response = self.client.messages.create(
             model=self.model,
             max_tokens=max_tokens,
-            system=prompts.SYSTEM_PROMPT,
+            system=prompts.get_system_prompt(),
             tools=prompts.TOOL_DEFINITIONS,
             messages=messages,
         )
@@ -170,7 +170,7 @@ class OpenAIProvider(LLMProvider):
         oai_messages = []
         has_system = any(m.get("role") == "system" for m in messages)
         if not has_system:
-            oai_messages.append({"role": "system", "content": prompts.SYSTEM_PROMPT})
+            oai_messages.append({"role": "system", "content": prompts.get_system_prompt()})
         oai_messages.extend(messages)
 
         kwargs = dict(
@@ -324,7 +324,7 @@ class GoogleProvider(LLMProvider):
             model=self.model,
             contents=contents,
             config=gtypes.GenerateContentConfig(
-                system_instruction=prompts.SYSTEM_PROMPT,
+                system_instruction=prompts.get_system_prompt(),
                 tools=tools_param,
                 max_output_tokens=max_tokens,
             ),

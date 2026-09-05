@@ -134,11 +134,24 @@ def _tab_categories():
     st.markdown("#### 📁 Category Browser")
     st.caption("See test counts and trends across 460+ food & drink categories.")
 
-    col1, col2 = st.columns([2, 1])
+    # Filters
+    col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
     with col1:
         cat_search = st.text_input("🔍 Search categories", placeholder="e.g. Chocolate")
     with col2:
         sort_by = st.selectbox("Sort by", ["Most tested", "Least tested", "A-Z"])
+    with col3:
+        cat_mfrs = _query("""
+            SELECT DISTINCT manufacturer_name
+            FROM curated.product_test_v
+            WHERE manufacturer_name IS NOT NULL
+            ORDER BY manufacturer_name
+        """)
+        cat_mfr_options = ["All manufacturers"] + cat_mfrs["manufacturer_name"].tolist()
+        cat_mfr_filter = st.selectbox("Manufacturer", cat_mfr_options, key="cat_mfr")
+    with col4:
+        cat_tier_filter = st.selectbox("Tier", ["All tiers", "Premium", "Standard", "Value"],
+                                       key="cat_tier")
 
     order = {
         "Most tested": "n DESC",
@@ -146,11 +159,19 @@ def _tab_categories():
         "A-Z": "category_name ASC",
     }[sort_by]
 
-    cat_where = ""
+    cat_conditions = []
     cat_params = []
     if cat_search:
-        cat_where = "WHERE category_name ILIKE ?"
-        cat_params = [f"%{cat_search}%"]
+        cat_conditions.append("category_name ILIKE ?")
+        cat_params.append(f"%{cat_search}%")
+    if cat_mfr_filter != "All manufacturers":
+        cat_conditions.append("manufacturer_name = ?")
+        cat_params.append(cat_mfr_filter)
+    if cat_tier_filter != "All tiers":
+        cat_conditions.append("tier = ?")
+        cat_params.append(cat_tier_filter)
+
+    cat_where = "WHERE " + " AND ".join(cat_conditions) if cat_conditions else ""
 
     df = _query(f"""
         SELECT
@@ -200,7 +221,6 @@ def _tab_categories():
                     product_name AS "Product",
                     manufacturer_name AS "Manufacturer",
                     test_year AS "Year",
-                    session_set AS "Set",
                     own_label_or_brand AS "Type",
                     tier AS "Tier"
                 FROM curated.product_test_v

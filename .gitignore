@@ -35,6 +35,7 @@ out/verbatims.csv
 out/measure_mapping.csv
 *.duckdb.wal
 out/fis_audit.duckdb
+out/fis_preferences.duckdb
 
 # NOTE: These runtime files ARE tracked (the app needs them):
 #   out/fis_warehouse.duckdb, out/chunks.json, out/chunk_index.json,

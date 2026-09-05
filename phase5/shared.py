@@ -207,5 +207,54 @@ def render_sidebar():
             st.session_state.total_queries = 0
             st.rerun()
 
+        # ── Preferences (memory) ──
+        st.divider()
+        st.markdown('<p class="sidebar-header">Preferences</p>', unsafe_allow_html=True)
+        st.caption("Teach the chatbot how you like answers.")
+
+        from phase5.preferences import (
+            add_preference, get_all_preferences,
+            toggle_preference, delete_preference,
+        )
+
+        # Show existing preferences
+        all_prefs = get_all_preferences()
+        if all_prefs:
+            for p in all_prefs:
+                cols = st.columns([0.7, 0.15, 0.15])
+                with cols[0]:
+                    status = "✅" if p["active"] else "⏸️"
+                    st.caption(f"{status} {p['text']}")
+                with cols[1]:
+                    if p["active"]:
+                        if st.button("⏸️", key=f"pause_{p['id']}",
+                                     help="Pause this preference"):
+                            toggle_preference(p["id"], False)
+                            st.rerun()
+                    else:
+                        if st.button("▶️", key=f"resume_{p['id']}",
+                                     help="Re-enable this preference"):
+                            toggle_preference(p["id"], True)
+                            st.rerun()
+                with cols[2]:
+                    if st.button("🗑️", key=f"del_{p['id']}",
+                                 help="Delete this preference"):
+                        delete_preference(p["id"])
+                        st.rerun()
+        else:
+            st.caption("No preferences saved yet.")
+
+        # Add new preference
+        new_pref = st.text_input(
+            "Add a preference",
+            placeholder="e.g. Always show data as tables",
+            key="new_pref_input",
+            label_visibility="collapsed",
+        )
+        if st.button("💾 Save preference", use_container_width=True,
+                     disabled=not new_pref):
+            add_preference(new_pref)
+            st.rerun()
+
         st.divider()
         st.caption("Built by F!S Group · Powered by FoodFax")
