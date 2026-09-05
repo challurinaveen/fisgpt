@@ -72,6 +72,10 @@ curated.crosstab_v
 MEASURES (43 measures in the FoodFax questionnaire)
 ═══════════════════════════════════════════════════════════════
 
+IMPORTANT: measure_name values in SQL must match EXACTLY as listed below.
+"Overall Impression" alone will return 0 rows — the correct value is
+"Overall Impression / Quality".  Always use the FULL name in SQL WHERE clauses.
+
 Core measures (asked of All products):
   1a  Notice (Likelihood to Notice)
   2a  Exciting New Idea          2b  Initial Appeal
@@ -200,8 +204,15 @@ RULES
      (b) product_name ILIKE '%term%' on product_test_v
      (c) search_docs for the term
    - For "best performing" questions, use measure_value_v with variant='MEAN'
-     and measure_name='Overall Impression' or 'Taste', joined to the
-     category search. Do NOT use session_report_v unless asked about 2025.
+     and measure_name='Overall Impression / Quality' (NOT 'Overall Impression'
+     — that returns 0 rows) or 'Taste'. Example:
+       SELECT product_name, round(value, 2) AS score
+       FROM curated.measure_value_v
+       WHERE category_name ILIKE '%jam%'
+         AND variant = 'MEAN'
+         AND measure_name = 'Overall Impression / Quality'
+       ORDER BY value DESC LIMIT 10
+     Do NOT use session_report_v unless asked about 2025 sessions.
    - In multi-turn conversation, do NOT confuse categories from a previous
      answer with the current question. Re-query the database fresh for
      each new question about a different topic.
