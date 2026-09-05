@@ -16,6 +16,7 @@ import streamlit as st
 
 from phase4 import answerer
 from phase4.providers import get_provider
+from phase4.tools import get_pending_charts
 from phase5.audit_log import log_query
 
 
@@ -62,6 +63,30 @@ def _render_welcome():
                 st.rerun()
 
 
+def _render_charts(charts: list[dict]):
+    """Render charts stored by the create_chart tool."""
+    for chart in charts:
+        chart_type = chart.get("type", "bar")
+        title = chart.get("title", "Chart")
+        data = chart.get("data")
+
+        if data is None or len(data) == 0:
+            continue
+
+        st.markdown(f"**{title}**")
+
+        # Use the first column as the index
+        index_col = data.columns[0]
+        chart_df = data.set_index(index_col)
+
+        if chart_type == "line":
+            st.line_chart(chart_df)
+        elif chart_type == "area":
+            st.area_chart(chart_df)
+        else:
+            st.bar_chart(chart_df)
+
+
 def _render_message(msg: dict):
     """Render a single chat message with optional metadata."""
     role = msg["role"]
@@ -69,6 +94,10 @@ def _render_message(msg: dict):
 
     with st.chat_message(role, avatar="🍽️" if role == "assistant" else None):
         st.markdown(content)
+
+        # Charts (if any were generated with this message)
+        if role == "assistant" and msg.get("charts"):
+            _render_charts(msg["charts"])
 
         # Tool calls (if verbose)
         if (role == "assistant"
@@ -144,6 +173,11 @@ def _generate_answer(question: str):
             # Render answer
             st.markdown(answer_text)
 
+            # Render any charts created by the create_chart tool
+            charts = get_pending_charts()
+            if charts:
+                _render_charts(charts)
+
             # Stats
             stats = {
                 "elapsed": elapsed,
@@ -171,11 +205,12 @@ def _generate_answer(question: str):
                             language="json",
                         )
 
-            # Save to session
+            # Save to session (include charts for replay)
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": answer_text,
                 "tool_calls": result["tool_calls"],
+                "charts": charts if charts else None,
                 "stats": stats,
             })
             st.session_state.total_tokens += tokens

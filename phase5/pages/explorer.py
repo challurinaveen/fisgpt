@@ -33,7 +33,7 @@ def _tab_products():
     st.markdown("#### 🛒 Product Browser")
     st.caption("Search and filter across 25,000+ product tests.")
 
-    # Filters
+    # Filters — row 1
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
@@ -45,8 +45,28 @@ def _tab_products():
     with col3:
         brand_filter = st.selectbox("Type", ["All", "Brand", "Own Label"])
     with col4:
-        source_filter = st.selectbox("Source", ["All", "session_pdf", "norm_data",
-                                                 "historic_products", "ffx_pre_2021"])
+        tier_filter = st.selectbox("Tier", ["All", "Premium", "Standard", "Value"])
+
+    # Filters — row 2
+    col5, col6 = st.columns(2)
+
+    with col5:
+        mfrs = _query("""
+            SELECT DISTINCT manufacturer_name
+            FROM curated.product_test_v
+            WHERE manufacturer_name IS NOT NULL
+            ORDER BY manufacturer_name
+        """)
+        mfr_options = ["All"] + mfrs["manufacturer_name"].tolist()
+        mfr_filter = st.selectbox("Manufacturer", mfr_options)
+    with col6:
+        cats = _query("""
+            SELECT DISTINCT category_name
+            FROM curated.product_test_v
+            ORDER BY category_name
+        """)
+        cat_options = ["All"] + cats["category_name"].tolist()
+        cat_filter = st.selectbox("Category", cat_options)
 
     # Build query
     conditions = []
@@ -61,9 +81,15 @@ def _tab_products():
     if brand_filter != "All":
         conditions.append("own_label_or_brand = ?")
         params.append(brand_filter)
-    if source_filter != "All":
-        conditions.append("source_table = ?")
-        params.append(source_filter)
+    if tier_filter != "All":
+        conditions.append("tier = ?")
+        params.append(tier_filter)
+    if mfr_filter != "All":
+        conditions.append("manufacturer_name = ?")
+        params.append(mfr_filter)
+    if cat_filter != "All":
+        conditions.append("category_name = ?")
+        params.append(cat_filter)
 
     where = "WHERE " + " AND ".join(conditions) if conditions else ""
 
@@ -79,11 +105,9 @@ def _tab_products():
                 manufacturer_name,
                 category_name,
                 test_year,
-                session_set,
                 own_label_or_brand AS type,
                 tier,
-                price_gbp AS price,
-                source_table AS source
+                price_gbp AS price
             FROM curated.product_test_v
             {where}
             ORDER BY test_year DESC, product_name
@@ -265,54 +289,104 @@ def _tab_sessions():
 
 def _tab_measures():
     st.markdown("#### 📐 Measure Explorer")
-    st.caption("Browse the 43 measures in the FoodFax questionnaire.")
+    st.caption("Browse the 43 measures in the FoodFax questionnaire. "
+               "Filter by category to see how a specific category scores.")
 
-    df = _query("""
-        SELECT
-            measure_code AS "Code",
-            measure_name AS "Measure",
-            asked_of AS "Asked Of",
-            count(DISTINCT product_test_id) AS "Products with data"
-        FROM curated.measure_value_v
-        WHERE variant = 'MEAN'
-        GROUP BY measure_code, measure_name, asked_of
-        ORDER BY measure_code
-    """)
+    # Filters
+    col1, col2 = st.columns(2)
 
-    asked_of_filter = st.selectbox(
-        "Filter by audience",
-        ["All", "All", "Drinks", "Fresh Produce"],
-        index=0,
-    )
+    with col1:
+        asked_of_filter = st.selectbox(
+            "Filter by audience",
+            ["All", "Drinks", "Fresh Produce"],
+            index=0,
+            key="measure_audience",
+        )
+    with col2:
+        measure_cats = _query("""
+            SELECT DISTINCT category_name
+            FROM curated.measure_value_v
+            ORDER BY category_name
+        """)
+        measure_cat_options = ["All categories"] + measure_cats["category_name"].tolist()
+        measure_cat_filter = st.selectbox(
+            "Filter by category",
+            measure_cat_options,
+            key="measure_category",
+        )
+
+    # Build measure list query — optionally scoped to a category
+    if measure_cat_filter != "All categories":
+        df = _query("""
+            SELECT
+                measure_code AS "Code",
+                measure_name AS "Measure",
+                asked_of AS "Asked Of",
+                count(DISTINCT product_test_id) AS "Products",
+                round(avg(value), 2) AS "Avg Score"
+            FROM curated.measure_value_v
+            WHERE variant = 'MEAN' AND category_name = ?
+            GROUP BY measure_code, measure_name, asked_of
+            ORDER BY measure_code
+        """, [measure_cat_filter])
+    else:
+        df = _query("""
+            SELECT
+                measure_code AS "Code",
+                measure_name AS "Measure",
+                asked_of AS "Asked Of",
+                count(DISTINCT product_test_id) AS "Products"
+            FROM curated.measure_value_v
+            WHERE variant = 'MEAN'
+            GROUP BY measure_code, measure_name, asked_of
+            ORDER BY measure_code
+        """)
 
     if asked_of_filter != "All":
         df = df[df["Asked Of"].str.contains(asked_of_filter, case=False, na=False)]
 
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-    # Measure detail
+    # Measure detail — trend chart
     st.divider()
     selected_measure = st.selectbox(
         "Drill into a measure",
         df["Measure"].tolist(),
         index=None,
-        placeholder="Select a measure for stats…",
+        placeholder="Select a measure for trend chart…",
+        key="measure_drill",
     )
 
     if selected_measure:
-        st.markdown(f"##### {selected_measure} — Mean scores by year")
+        if measure_cat_filter != "All categories":
+            st.markdown(f"##### {selected_measure} — {measure_cat_filter}")
 
-        trend = _query("""
-            SELECT
-                test_year AS year,
-                round(avg(value), 2) AS avg_score,
-                count(*) AS n
-            FROM curated.measure_value_v
-            WHERE measure_name = ? AND variant = 'MEAN'
-              AND test_year >= 2010
-            GROUP BY test_year
-            ORDER BY test_year
-        """, [selected_measure])
+            trend = _query("""
+                SELECT
+                    test_year AS year,
+                    round(avg(value), 2) AS avg_score,
+                    count(*) AS n
+                FROM curated.measure_value_v
+                WHERE measure_name = ? AND variant = 'MEAN'
+                  AND category_name = ?
+                  AND test_year >= 2010
+                GROUP BY test_year
+                ORDER BY test_year
+            """, [selected_measure, measure_cat_filter])
+        else:
+            st.markdown(f"##### {selected_measure} — All categories")
+
+            trend = _query("""
+                SELECT
+                    test_year AS year,
+                    round(avg(value), 2) AS avg_score,
+                    count(*) AS n
+                FROM curated.measure_value_v
+                WHERE measure_name = ? AND variant = 'MEAN'
+                  AND test_year >= 2010
+                GROUP BY test_year
+                ORDER BY test_year
+            """, [selected_measure])
 
         if len(trend) > 1:
             st.line_chart(trend.set_index("year")["avg_score"])
@@ -321,6 +395,133 @@ def _tab_measures():
             ))
         else:
             st.info("Not enough data points for a trend chart.")
+
+
+# ── tab: Compare (product vs norm) ──────────────────────────────────
+
+def _tab_compare():
+    st.markdown("#### 📊 Product vs Category Norm")
+    st.caption("Select products and see how they perform against their category averages.")
+
+    # Pick category first to narrow the product list
+    compare_cats = _query("""
+        SELECT DISTINCT category_name
+        FROM curated.session_report_v
+        ORDER BY category_name
+    """)
+
+    if len(compare_cats) == 0:
+        st.info("No session report data available for comparison.")
+        return
+
+    selected_category = st.selectbox(
+        "Select a category",
+        compare_cats["category_name"].tolist(),
+        index=None,
+        placeholder="Choose a category…",
+        key="compare_category",
+    )
+
+    if not selected_category:
+        st.info("Pick a category above to see product comparisons.")
+        return
+
+    products_in_cat = _query("""
+        SELECT
+            product_name,
+            score_out_of_50,
+            category_average,
+            vs_category_norm
+        FROM curated.session_report_v
+        WHERE category_name = ?
+        ORDER BY product_name
+    """, [selected_category])
+
+    if len(products_in_cat) == 0:
+        st.info(f"No session report products found in '{selected_category}'.")
+        return
+
+    selected_products = st.multiselect(
+        "Select product(s) to compare",
+        products_in_cat["product_name"].tolist(),
+        default=products_in_cat["product_name"].tolist(),
+        key="compare_products",
+    )
+
+    if not selected_products:
+        st.info("Select at least one product.")
+        return
+
+    df = products_in_cat[products_in_cat["product_name"].isin(selected_products)].copy()
+
+    # ── Bar chart: product score vs category average ──
+    st.markdown(f"##### Score vs Category Average — {selected_category}")
+
+    chart_data = pd.DataFrame({
+        "Product": df["product_name"].values,
+        "Product Score": df["score_out_of_50"].values,
+        "Category Average": df["category_average"].values,
+    }).set_index("Product")
+
+    st.bar_chart(chart_data)
+
+    st.caption("Bars show the product's score out of 50 alongside the category average.")
+
+    # ── Table: detail with vs norm ──
+    st.divider()
+    st.markdown("##### Detail")
+
+    detail_df = df.rename(columns={
+        "product_name": "Product",
+        "score_out_of_50": "Score /50",
+        "category_average": "Cat Avg",
+        "vs_category_norm": "vs Norm",
+    })
+
+    st.dataframe(
+        detail_df,
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "Score /50": st.column_config.ProgressColumn(
+                "Score /50", min_value=0, max_value=50, format="%d",
+            ),
+            "vs Norm": st.column_config.NumberColumn("vs Norm", format="%+d"),
+        },
+    )
+
+    # ── Measure-level breakdown (if products selected) ──
+    if len(selected_products) <= 5:
+        st.divider()
+        st.markdown("##### Measure Breakdown")
+
+        # Get key measures for the selected products
+        placeholders = ", ".join(["?"] * len(selected_products))
+        measures_df = _query(f"""
+            SELECT
+                product_name,
+                measure_name,
+                round(value, 2) AS score
+            FROM curated.measure_value_v
+            WHERE product_name IN ({placeholders})
+              AND variant = 'MEAN'
+              AND measure_name IN (
+                  'Taste', 'Overall Impression', 'Value for Money',
+                  'Initial Appeal', 'Appearance', 'Packaging',
+                  'Smell', 'Texture'
+              )
+            ORDER BY measure_name, product_name
+        """, selected_products)
+
+        if len(measures_df) > 0:
+            pivot = measures_df.pivot_table(
+                index="measure_name", columns="product_name",
+                values="score", aggfunc="first",
+            )
+            st.bar_chart(pivot)
+            st.caption("Key measures compared across selected products (mean scores).")
+        else:
+            st.info("No measure-level data available for these products.")
 
 
 # ── page entry point ──────────────────────────────────────────────────
@@ -365,11 +566,12 @@ def _tab_audit_log():
 
 def render():
     """Main render function called by st.navigation."""
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "🛒 Products",
         "📁 Categories",
         "🗂️ 2025 Sessions",
         "📐 Measures",
+        "📊 Compare",
         "📋 Audit Log",
     ])
 
@@ -382,4 +584,6 @@ def render():
     with tab4:
         _tab_measures()
     with tab5:
+        _tab_compare()
+    with tab6:
         _tab_audit_log()

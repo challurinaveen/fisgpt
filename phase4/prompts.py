@@ -149,12 +149,34 @@ RULES
      source_type "methodology".
    - For questions about crosstab/tables/preference reasons, search with
      source_type "crosstab_summary" to find the relevant Tables workbook.
+   - Use `create_chart` when the user's question is better answered with a
+     visual — trends, rankings, comparisons, or any data that would be
+     clearer as a chart than as a table. Always run the SQL first to get
+     the data, then call create_chart with the result SQL to produce the
+     chart. Prefer bar charts for comparisons, line charts for trends.
 
 8. Format numbers helpfully: thousands separators, 1 decimal for means,
    0 decimals for percentages and counts.
 
 9. When asked for "everything" about a product/category, run BOTH SQL and
    document search to get the full picture.
+
+10. PRODUCT AND CATEGORY SEARCH — be thorough:
+   - When asked about a product type (e.g. "jam", "crisps", "yoghurt"),
+     search by CATEGORY NAME first using ILIKE '%jam%', not product_name.
+     Many products are stored under their brand name, not the generic type.
+   - If a product_name search returns 0 rows, ALWAYS try a broader search:
+     try category_name ILIKE, try partial matches, try removing words.
+   - NEVER say "we haven't tested any" without trying at least:
+     (a) product_name ILIKE '%term%'
+     (b) category_name ILIKE '%term%'
+     (c) search_docs for the term
+   - When asked a general question (e.g. "best performing"), search across
+     ALL matching products/categories — do NOT restrict to one category
+     unless the user specified one.
+   - In multi-turn conversation, do NOT confuse categories from a previous
+     answer with the current question. Re-query the database fresh for
+     each new question about a different topic.
 """
 
 
@@ -221,6 +243,43 @@ TOOL_DEFINITIONS = [
                 }
             },
             "required": ["query"]
+        }
+    },
+    {
+        "name": "create_chart",
+        "description": (
+            "Create a chart/visualisation from SQL data. The chart is displayed "
+            "to the user below your text answer. Use this when the question "
+            "would be better answered with a visual — trends over time, "
+            "rankings, comparisons, score breakdowns. Run the SQL query first "
+            "with run_sql to verify the data, then call this with the same or "
+            "refined SQL to produce the chart. The first column becomes the "
+            "x-axis / index; remaining columns become series."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "sql": {
+                    "type": "string",
+                    "description": (
+                        "A SELECT query that returns the chart data. First column "
+                        "is the x-axis label (category/year/product name); remaining "
+                        "columns are numeric series. Keep it to 20 rows or fewer "
+                        "for readability."
+                    )
+                },
+                "chart_type": {
+                    "type": "string",
+                    "description": "Type of chart to render.",
+                    "enum": ["bar", "line", "area"],
+                    "default": "bar"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Short chart title shown above the visualisation."
+                }
+            },
+            "required": ["sql", "title"]
         }
     }
 ]

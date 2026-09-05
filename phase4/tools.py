@@ -178,6 +178,63 @@ def execute_search(query: str, top_k: int = 5, source_type: str | None = None) -
         return f"SEARCH ERROR: {e}\n{traceback.format_exc()}"
 
 
+# ── Chart tool ────────────────────────────────────────────────────────
+
+# Charts created during a tool-use loop are stored here and rendered
+# by the Streamlit chat page after the answer is displayed.
+_pending_charts: list[dict] = []
+
+
+def get_pending_charts() -> list[dict]:
+    """Pop and return all charts queued by create_chart calls."""
+    charts = list(_pending_charts)
+    _pending_charts.clear()
+    return charts
+
+
+def execute_chart(sql: str, chart_type: str = "bar", title: str = "") -> str:
+    """
+    Execute SQL and store the result for rendering as a chart.
+
+    Returns a confirmation string to the LLM (the actual chart is
+    rendered by the Streamlit layer).
+    """
+    try:
+        con = warehouse.connect(read_only=True)
+        sql_stripped = sql.strip().rstrip(";")
+
+        # Safety: only SELECT
+        first_word = sql_stripped.split()[0].upper() if sql_stripped else ""
+        if first_word not in ("SELECT", "WITH"):
+            return "ERROR: Only SELECT queries are allowed for charts."
+
+        result = con.execute(sql_stripped + " LIMIT 30")
+        columns = [desc[0] for desc in result.description]
+        rows = result.fetchall()
+        con.close()
+
+        if not rows:
+            return "Chart not created — query returned 0 rows."
+
+        # Store chart data for Streamlit rendering
+        import pandas as pd
+        df = pd.DataFrame(rows, columns=columns)
+
+        _pending_charts.append({
+            "type": chart_type or "bar",
+            "title": title or "Chart",
+            "data": df,
+        })
+
+        return (
+            f"Chart created: '{title}' ({chart_type} chart, {len(rows)} data points). "
+            "It will be displayed to the user below your answer."
+        )
+
+    except Exception as e:
+        return f"CHART ERROR: {e}"
+
+
 # ── Tool dispatcher ───────────────────────────────────────────────────
 
 def dispatch_tool(tool_name: str, tool_input: dict) -> str:
@@ -194,5 +251,10 @@ def dispatch_tool(tool_name: str, tool_input: dict) -> str:
         top_k = tool_input.get("top_k", 5)
         source_type = tool_input.get("source_type")
         return execute_search(query, top_k, source_type)
+    elif tool_name == "create_chart":
+        sql = tool_input.get("sql", "")
+        chart_type = tool_input.get("chart_type", "bar")
+        title = tool_input.get("title", "")
+        return execute_chart(sql, chart_type, title)
     else:
         return f"Unknown tool: {tool_name}"
