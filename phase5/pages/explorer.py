@@ -283,22 +283,14 @@ def _tab_sessions():
         st.info("No products match these filters.")
         return
 
-    # Colour the vs Norm column
     st.dataframe(
         df,
         use_container_width=True,
         hide_index=True,
         column_config={
-            "Score /50": st.column_config.ProgressColumn(
-                "Score /50",
-                min_value=0,
-                max_value=50,
-                format="%d",
-            ),
-            "vs Norm": st.column_config.NumberColumn(
-                "vs Norm",
-                format="%+d",
-            ),
+            "Score /50": st.column_config.NumberColumn("Score /50", format="%d"),
+            "Cat Avg": st.column_config.NumberColumn("Cat Avg", format="%d"),
+            "vs Norm": st.column_config.NumberColumn("vs Norm", format="%+d"),
         },
     )
 
@@ -474,41 +466,40 @@ def _tab_compare():
 
     df = products_in_cat[products_in_cat["product_name"].isin(selected_products)].copy()
 
-    # ── Bar chart: product score vs category average ──
+    # ── Score vs Category Average ──
+    st.divider()
     st.markdown(f"##### Score vs Category Average — {selected_category}")
 
-    chart_data = pd.DataFrame({
+    # Build a clean table for display with conditional colouring
+    display_df = pd.DataFrame({
         "Product": df["product_name"].values,
-        "Product Score": df["score_out_of_50"].values,
-        "Category Average": df["category_average"].values,
-    }).set_index("Product")
-
-    st.bar_chart(chart_data)
-
-    st.caption("Bars show the product's score out of 50 alongside the category average.")
-
-    # ── Table: detail with vs norm ──
-    st.divider()
-    st.markdown("##### Detail")
-
-    detail_df = df.rename(columns={
-        "product_name": "Product",
-        "score_out_of_50": "Score /50",
-        "category_average": "Cat Avg",
-        "vs_category_norm": "vs Norm",
+        "Score /50": df["score_out_of_50"].values,
+        "Cat Avg": df["category_average"].values,
+        "vs Norm": df["vs_category_norm"].values,
     })
 
     st.dataframe(
-        detail_df,
+        display_df,
         use_container_width=True,
         hide_index=True,
         column_config={
-            "Score /50": st.column_config.ProgressColumn(
-                "Score /50", min_value=0, max_value=50, format="%d",
-            ),
+            "Product": st.column_config.TextColumn("Product", width="large"),
+            "Score /50": st.column_config.NumberColumn("Score /50", format="%d"),
+            "Cat Avg": st.column_config.NumberColumn("Cat Avg", format="%d"),
             "vs Norm": st.column_config.NumberColumn("vs Norm", format="%+d"),
         },
     )
+
+    # Bar chart — grouped bars per product
+    if len(df) <= 15:
+        chart_data = pd.DataFrame({
+            "Product": df["product_name"].values,
+            "Product Score": df["score_out_of_50"].values,
+            "Category Average": df["category_average"].values,
+        }).set_index("Product")
+
+        st.bar_chart(chart_data, horizontal=True)
+        st.caption("Bars show the product's score out of 50 alongside the category average.")
 
     # ── Measure-level breakdown (if products selected) ──
     if len(selected_products) <= 5:
@@ -516,6 +507,7 @@ def _tab_compare():
         st.markdown("##### Measure Breakdown")
 
         # Get key measures for the selected products
+        # NOTE: 'Overall Impression / Quality' is the correct name, NOT 'Overall Impression'
         placeholders = ", ".join(["?"] * len(selected_products))
         measures_df = _query(f"""
             SELECT
@@ -526,7 +518,7 @@ def _tab_compare():
             WHERE product_name IN ({placeholders})
               AND variant = 'MEAN'
               AND measure_name IN (
-                  'Taste', 'Overall Impression', 'Value for Money',
+                  'Taste', 'Overall Impression / Quality', 'Value for Money',
                   'Initial Appeal', 'Appearance', 'Packaging',
                   'Smell', 'Texture'
               )
@@ -538,7 +530,7 @@ def _tab_compare():
                 index="measure_name", columns="product_name",
                 values="score", aggfunc="first",
             )
-            st.bar_chart(pivot)
+            st.bar_chart(pivot, horizontal=True)
             st.caption("Key measures compared across selected products (mean scores).")
         else:
             st.info("No measure-level data available for these products.")
