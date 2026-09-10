@@ -533,7 +533,11 @@ def _tab_compare():
             st.bar_chart(pivot, horizontal=True)
             st.caption("Key measures compared across selected products (mean scores).")
         else:
-            st.info("No measure-level data available for these products.")
+            st.info(
+                "Measure-level scores are not available for 2025 session products. "
+                "This data is available for historic products tested before 2020. "
+                "Use the Measures tab to explore category-level averages instead."
+            )
 
 
 # ── page entry point ──────────────────────────────────────────────────
