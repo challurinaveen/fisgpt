@@ -130,7 +130,7 @@ def _render_message(msg: dict):
 
 
 def _generate_answer(question: str):
-    """Run the answering pipeline and render the result."""
+    """Run the answering pipeline with streaming output."""
     # Save user message
     st.session_state.messages.append({"role": "user", "content": question})
     with st.chat_message("user"):
@@ -143,22 +143,40 @@ def _generate_answer(question: str):
         if m["role"] in ("user", "assistant")
     ]
 
-    # Generate
+    # Generate — with streaming
     with st.chat_message("assistant", avatar="🍽️"):
         status = st.status("Thinking…", expanded=False)
+        text_placeholder = st.empty()
         t0 = time.time()
 
         try:
             provider = get_provider(st.session_state.provider_key)
-            result = answerer.answer(
+            answer_text = ""
+            result = None
+
+            for event in answerer.answer_stream(
                 question=question,
                 provider=provider,
-                verbose=False,
                 conversation_history=history or None,
-            )
+            ):
+                if event["type"] == "status":
+                    status.update(label=event["msg"])
+                elif event["type"] == "token":
+                    answer_text += event["text"]
+                    text_placeholder.markdown(answer_text + " ▌")
+                elif event["type"] == "done":
+                    result = event["result"]
+
             elapsed = time.time() - t0
+
+            if result is None:
+                raise RuntimeError("No response from LLM")
+
             answer_text = result["answer"]
             tokens = result["input_tokens"] + result["output_tokens"]
+
+            # Final render (removes cursor)
+            text_placeholder.markdown(answer_text)
 
             # Update status
             tool_summary = ""
@@ -169,9 +187,6 @@ def _generate_answer(question: str):
                 label=f"Done in {elapsed:.1f}s · {tokens:,} tokens{tool_summary}",
                 state="complete",
             )
-
-            # Render answer
-            st.markdown(answer_text)
 
             # Render any charts created by the create_chart tool
             charts = get_pending_charts()

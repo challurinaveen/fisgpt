@@ -212,6 +212,102 @@ class OpenAIProvider(LLMProvider):
             raw=response,
         )
 
+    def chat_stream(self, messages: list[dict], max_tokens: int = 4096):
+        """Streaming chat. Yields (type, data) tuples.
+
+        Yields:
+            ("token", str)              — text chunk (final answer)
+            ("tool_calls", LLMResponse) — model wants tool use
+            ("done", LLMResponse)       — final text response complete
+        """
+        oai_messages = []
+        has_system = any(m.get("role") == "system" for m in messages)
+        if not has_system:
+            oai_messages.append({"role": "system", "content": prompts.get_system_prompt()})
+        oai_messages.extend(messages)
+
+        kwargs = dict(
+            model=self.model,
+            messages=oai_messages,
+            tools=self._tools,
+            max_tokens=max_tokens,
+            stream=True,
+            stream_options={"include_usage": True},
+        )
+
+        if self.model.startswith("o"):
+            kwargs.pop("max_tokens", None)
+
+        stream = self.client.chat.completions.create(**kwargs)
+
+        collected_text = ""
+        collected_tool_calls: dict[int, dict] = {}
+        input_tokens = 0
+        output_tokens = 0
+        finish_reason = None
+
+        for chunk in stream:
+            # Usage comes in the final chunk
+            if chunk.usage:
+                input_tokens = chunk.usage.prompt_tokens or 0
+                output_tokens = chunk.usage.completion_tokens or 0
+
+            if not chunk.choices:
+                continue
+
+            choice = chunk.choices[0]
+            delta = choice.delta
+
+            if choice.finish_reason:
+                finish_reason = choice.finish_reason
+
+            # Text content — yield immediately
+            if delta and delta.content:
+                collected_text += delta.content
+                yield ("token", delta.content)
+
+            # Tool call deltas — accumulate
+            if delta and delta.tool_calls:
+                for tc_delta in delta.tool_calls:
+                    idx = tc_delta.index
+                    if idx not in collected_tool_calls:
+                        collected_tool_calls[idx] = {
+                            "id": "",
+                            "name": "",
+                            "arguments": "",
+                        }
+                    if tc_delta.id:
+                        collected_tool_calls[idx]["id"] = tc_delta.id
+                    if tc_delta.function:
+                        if tc_delta.function.name:
+                            collected_tool_calls[idx]["name"] = tc_delta.function.name
+                        if tc_delta.function.arguments:
+                            collected_tool_calls[idx]["arguments"] += tc_delta.function.arguments
+
+        # Build final response
+        tool_calls = []
+        for idx in sorted(collected_tool_calls.keys()):
+            tc = collected_tool_calls[idx]
+            try:
+                args = json.loads(tc["arguments"])
+            except json.JSONDecodeError:
+                args = {"raw": tc["arguments"]}
+            tool_calls.append(ToolCall(id=tc["id"], name=tc["name"], input=args))
+
+        response = LLMResponse(
+            text=collected_text,
+            tool_calls=tool_calls,
+            wants_tool_use=(finish_reason == "tool_calls"),
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            raw=None,
+        )
+
+        if tool_calls:
+            yield ("tool_calls", response)
+        else:
+            yield ("done", response)
+
     def format_tool_result(self, tool_call: ToolCall, result: str) -> dict:
         return {
             "role": "tool",
@@ -220,6 +316,23 @@ class OpenAIProvider(LLMProvider):
         }
 
     def format_assistant_msg(self, response: LLMResponse) -> dict:
+        # Streaming responses have raw=None — build from LLMResponse fields
+        if response.raw is None:
+            d = {"role": "assistant", "content": response.text or ""}
+            if response.tool_calls:
+                d["tool_calls"] = [
+                    {
+                        "id": tc.id,
+                        "type": "function",
+                        "function": {
+                            "name": tc.name,
+                            "arguments": json.dumps(tc.input),
+                        },
+                    }
+                    for tc in response.tool_calls
+                ]
+            return d
+
         msg = response.raw.choices[0].message
         d = {"role": "assistant", "content": msg.content or ""}
         if msg.tool_calls:

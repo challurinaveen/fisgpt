@@ -136,3 +136,154 @@ def answer(
         "output_tokens": total_output_tokens,
         "rounds": MAX_TOOL_ROUNDS,
     }
+
+
+# ── streaming version ───────────────────────────────────────────────
+
+_TOOL_STATUS = {
+    "run_sql":      "📊 Running SQL query…",
+    "search_docs":  "🔍 Searching documents…",
+    "create_chart": "📈 Creating chart…",
+}
+
+
+def answer_stream(
+    question: str,
+    provider: LLMProvider | None = None,
+    provider_name: str = "openai",
+    model: str | None = None,
+    conversation_history: list | None = None,
+) -> Generator[dict, None, None]:
+    """
+    Streaming version of answer().
+
+    Yields event dicts:
+        {"type": "status",  "msg": "📊 Running SQL query…"}
+        {"type": "token",   "text": "The"}
+        {"type": "done",    "result": { ... same as answer() ... }}
+    """
+    if provider is None:
+        provider = get_provider(provider_name, model)
+
+    # Build messages
+    if conversation_history:
+        messages = list(conversation_history)
+        messages.append({"role": "user", "content": question})
+    else:
+        messages = [{"role": "user", "content": question}]
+
+    tool_calls_log: list[dict] = []
+    total_input_tokens = 0
+    total_output_tokens = 0
+
+    has_streaming = hasattr(provider, "chat_stream")
+
+    for round_num in range(MAX_TOOL_ROUNDS):
+        if has_streaming:
+            # ── streaming path ──
+            stream = provider.chat_stream(messages, max_tokens=MAX_TOKENS)
+            response = None
+
+            for event_type, event_data in stream:
+                if event_type == "token":
+                    yield {"type": "token", "text": event_data}
+                elif event_type in ("tool_calls", "done"):
+                    response = event_data
+
+            if response is None:
+                break
+
+            total_input_tokens += response.input_tokens
+            total_output_tokens += response.output_tokens
+
+            if response.wants_tool_use and response.tool_calls:
+                tool_result_msgs = []
+
+                for tc in response.tool_calls:
+                    yield {"type": "status", "msg": _TOOL_STATUS.get(tc.name, f"🔧 Using {tc.name}…")}
+
+                    result = tools.dispatch_tool(tc.name, tc.input)
+                    tool_calls_log.append({
+                        "tool": tc.name,
+                        "input": tc.input,
+                        "result_length": len(result),
+                    })
+                    tool_result_msgs.append(provider.format_tool_result(tc, result))
+
+                messages.append(provider.format_assistant_msg(response))
+                # OpenAI: tool results as separate messages
+                if provider.name == "openai":
+                    for tr in tool_result_msgs:
+                        messages.append(tr)
+                else:
+                    messages.append({"role": "user", "content": tool_result_msgs})
+            else:
+                # Final answer
+                yield {
+                    "type": "done",
+                    "result": {
+                        "answer": response.text,
+                        "tool_calls": tool_calls_log,
+                        "provider": provider.name,
+                        "model": getattr(provider, "model", "unknown"),
+                        "input_tokens": total_input_tokens,
+                        "output_tokens": total_output_tokens,
+                        "rounds": round_num + 1,
+                    },
+                }
+                return
+        else:
+            # ── non-streaming fallback ──
+            yield {"type": "status", "msg": "🤔 Thinking…"}
+            response = provider.chat(messages, max_tokens=MAX_TOKENS)
+            total_input_tokens += response.input_tokens
+            total_output_tokens += response.output_tokens
+
+            if response.wants_tool_use and response.tool_calls:
+                tool_result_msgs = []
+                for tc in response.tool_calls:
+                    yield {"type": "status", "msg": _TOOL_STATUS.get(tc.name, f"🔧 Using {tc.name}…")}
+                    result = tools.dispatch_tool(tc.name, tc.input)
+                    tool_calls_log.append({
+                        "tool": tc.name,
+                        "input": tc.input,
+                        "result_length": len(result),
+                    })
+                    tool_result_msgs.append(provider.format_tool_result(tc, result))
+
+                messages.append(provider.format_assistant_msg(response))
+                if provider.name == "openai":
+                    for tr in tool_result_msgs:
+                        messages.append(tr)
+                elif provider.name == "anthropic":
+                    messages.append({"role": "user", "content": tool_result_msgs})
+                elif provider.name == "google":
+                    messages.append({"role": "user", "content": tool_result_msgs})
+            else:
+                yield {
+                    "type": "done",
+                    "result": {
+                        "answer": response.text,
+                        "tool_calls": tool_calls_log,
+                        "provider": provider.name,
+                        "model": getattr(provider, "model", "unknown"),
+                        "input_tokens": total_input_tokens,
+                        "output_tokens": total_output_tokens,
+                        "rounds": round_num + 1,
+                    },
+                }
+                return
+
+    # Safety cap
+    yield {
+        "type": "done",
+        "result": {
+            "answer": "(Maximum tool-use rounds reached. The question may need to be broken down.)",
+            "tool_calls": tool_calls_log,
+            "provider": provider.name,
+            "model": getattr(provider, "model", "unknown"),
+            "input_tokens": total_input_tokens,
+            "output_tokens": total_output_tokens,
+            "rounds": MAX_TOOL_ROUNDS,
+        },
+    }
