@@ -154,18 +154,30 @@ def _generate_answer(question: str):
             answer_text = ""
             result = None
 
-            for event in answerer.answer_stream(
-                question=question,
-                provider=provider,
-                conversation_history=history or None,
-            ):
-                if event["type"] == "status":
-                    status.update(label=event["msg"])
-                elif event["type"] == "token":
-                    answer_text += event["text"]
-                    text_placeholder.markdown(answer_text + " ▌")
-                elif event["type"] == "done":
-                    result = event["result"]
+            # Use streaming if available, fall back to blocking
+            _stream_fn = getattr(answerer, "answer_stream", None)
+
+            if _stream_fn is not None:
+                for event in _stream_fn(
+                    question=question,
+                    provider=provider,
+                    conversation_history=history or None,
+                ):
+                    if event["type"] == "status":
+                        status.update(label=event["msg"])
+                    elif event["type"] == "token":
+                        answer_text += event["text"]
+                        text_placeholder.markdown(answer_text + " ▌")
+                    elif event["type"] == "done":
+                        result = event["result"]
+            else:
+                # Fallback — non-streaming
+                result = answerer.answer(
+                    question=question,
+                    provider=provider,
+                    verbose=False,
+                    conversation_history=history or None,
+                )
 
             elapsed = time.time() - t0
 
