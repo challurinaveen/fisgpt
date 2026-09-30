@@ -9,6 +9,8 @@ _FIS_GPT = str(Path(__file__).resolve().parent.parent.parent)
 if _FIS_GPT not in sys.path:
     sys.path.insert(0, _FIS_GPT)
 
+import math
+
 import streamlit as st
 import pandas as pd
 
@@ -197,7 +199,6 @@ def render():
             ORDER BY tests DESC
         """)
         for _, row in storage.iterrows():
-            import math
             avg_p = row["avg_price"]
             price_str = ""
             if avg_p is not None and not (isinstance(avg_p, float) and math.isnan(avg_p)):

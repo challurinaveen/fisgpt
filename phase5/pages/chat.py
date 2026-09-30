@@ -258,11 +258,16 @@ def _generate_answer(question: str):
         except Exception as e:
             elapsed = time.time() - t0
             status.update(label=f"Error after {elapsed:.1f}s", state="error")
-            error_msg = f"❌ **Error:** {e}"
-            st.error(str(e))
+            # Sanitise error — don't expose file paths or internals
+            err_str = str(e)
+            if any(s in err_str.lower() for s in ("api_key", "traceback", "c:\\", "/home/")):
+                safe_msg = "Something went wrong. Please try again or rephrase your question."
+            else:
+                safe_msg = err_str
+            st.error(safe_msg)
             st.session_state.messages.append({
                 "role": "assistant",
-                "content": error_msg,
+                "content": f"❌ **Error:** {safe_msg}",
             })
 
 

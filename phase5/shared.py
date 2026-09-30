@@ -141,7 +141,7 @@ def init_state():
     """Set up session state defaults (idempotent)."""
     defaults = {
         "messages": [],
-        "provider_key": "gpt-4o-mini",
+        "provider_key": detect_default_provider(),
         "verbose": False,
         "total_tokens": 0,
         "total_queries": 0,
@@ -199,6 +199,20 @@ def render_sidebar():
         c2.metric("Tokens", f"{st.session_state.total_tokens:,}")
 
         st.divider()
+
+        # Model selector
+        available = get_available_models()
+        if len(available) > 1:
+            labels = [m[0] for m in available]
+            keys = [m[1] for m in available]
+            current_idx = keys.index(st.session_state.provider_key) if st.session_state.provider_key in keys else 0
+            selected_label = st.selectbox("🤖 Model", labels, index=current_idx, key="model_select")
+            selected_key = keys[labels.index(selected_label)]
+            if selected_key != st.session_state.provider_key:
+                st.session_state.provider_key = selected_key
+        else:
+            st.caption(f"🤖 {available[0][0]}")
+
         st.toggle("Show tool calls", key="verbose")
 
         if st.button("🗑️ Clear chat", use_container_width=True):

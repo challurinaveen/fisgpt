@@ -8,7 +8,6 @@ Run with:
 """
 from __future__ import annotations
 
-import importlib
 import os
 import sys
 from pathlib import Path
@@ -16,10 +15,6 @@ from pathlib import Path
 # Ensure fis-gpt is on the path
 _APP_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(_APP_DIR.parent))
-
-# Force-reload answerer so Streamlit picks up new functions after deploy
-import phase4.answerer as _answerer_mod
-importlib.reload(_answerer_mod)
 
 # Load .env
 from dotenv import load_dotenv

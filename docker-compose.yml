@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   fis-gpt:
     build: .
@@ -9,10 +7,12 @@ services:
     env_file:
       - .env
     volumes:
-      # Mount the pre-built database + embeddings
+      # Mount the pre-built database + embeddings (read-only)
       - ./out:/app/out:ro
-      # Mount corpus data (read-only) if you want to run refresh inside container
-      # - ../Fis Group:/data/corpus:ro
+      # Writable volume for audit log and preferences (survives restarts)
+      - fis-data:/app/data
+    environment:
+      - FIS_DATA_DIR=/app/data
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
@@ -20,3 +20,6 @@ services:
       timeout: 10s
       retries: 3
       start_period: 20s
+
+volumes:
+  fis-data:

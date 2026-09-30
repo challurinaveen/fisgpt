@@ -8,8 +8,8 @@ If APP_PASSWORD is not set, authentication is disabled (open access).
 """
 from __future__ import annotations
 
+import hmac
 import os
-import hashlib
 import streamlit as st
 
 
@@ -50,7 +50,7 @@ def check_password() -> bool:
         )
 
         if submitted:
-            if entered == password:
+            if hmac.compare_digest(entered, password):
                 st.session_state.authenticated = True
                 st.rerun()
             else:

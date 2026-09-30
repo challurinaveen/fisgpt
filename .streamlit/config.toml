@@ -13,7 +13,7 @@ primaryColor = "#E8553A"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#F8F9FA"
 textColor = "#2C3E50"
-font = "sans serif"
+font = "sans-serif"
 
 [client]
 showSidebarNavigation = true

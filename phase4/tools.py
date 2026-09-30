@@ -10,6 +10,7 @@ Both return plain-text results formatted for LLM consumption.
 from __future__ import annotations
 
 import json
+import math
 import traceback
 from pathlib import Path
 
@@ -78,7 +79,9 @@ def execute_sql(sql: str) -> str:
                     cells.append("")
                 elif isinstance(v, float):
                     # Smart formatting: integers show as int, floats get 2-4 decimals
-                    if v == int(v) and abs(v) < 1e6:
+                    if not math.isfinite(v):
+                        cells.append(str(v))
+                    elif v == int(v) and abs(v) < 1e6:
                         cells.append(f"{int(v):,}")
                     elif abs(v) < 0.01:
                         cells.append(f"{v:.4f}")
@@ -180,15 +183,29 @@ def execute_search(query: str, top_k: int = 5, source_type: str | None = None) -
 
 # ── Chart tool ────────────────────────────────────────────────────────
 
-# Charts created during a tool-use loop are stored here and rendered
+# Charts created during a tool-use loop are stored per-session and rendered
 # by the Streamlit chat page after the answer is displayed.
-_pending_charts: list[dict] = []
+
+
+def _get_chart_queue() -> list[dict]:
+    """Get the chart queue from Streamlit session state (thread-safe)."""
+    try:
+        import streamlit as st
+        if "_pending_charts" not in st.session_state:
+            st.session_state._pending_charts = []
+        return st.session_state._pending_charts
+    except Exception:
+        # Fallback for non-Streamlit contexts (CLI, tests)
+        if not hasattr(_get_chart_queue, "_fallback"):
+            _get_chart_queue._fallback = []
+        return _get_chart_queue._fallback
 
 
 def get_pending_charts() -> list[dict]:
     """Pop and return all charts queued by create_chart calls."""
-    charts = list(_pending_charts)
-    _pending_charts.clear()
+    queue = _get_chart_queue()
+    charts = list(queue)
+    queue.clear()
     return charts
 
 
@@ -220,7 +237,7 @@ def execute_chart(sql: str, chart_type: str = "bar", title: str = "") -> str:
         import pandas as pd
         df = pd.DataFrame(rows, columns=columns)
 
-        _pending_charts.append({
+        _get_chart_queue().append({
             "type": chart_type or "bar",
             "title": title or "Chart",
             "data": df,
