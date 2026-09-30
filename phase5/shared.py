@@ -235,24 +235,29 @@ def render_sidebar():
         all_prefs = get_all_preferences()
         if all_prefs:
             for p in all_prefs:
-                cols = st.columns([0.7, 0.15, 0.15])
-                with cols[0]:
-                    status = "✅" if p["active"] else "⏸️"
-                    st.caption(f"{status} {p['text']}")
-                with cols[1]:
+                status = "✅" if p["active"] else "⏸️"
+                st.markdown(
+                    f"<div style='font-size:0.85rem;padding:6px 8px;"
+                    f"background:{BRAND['bg_light']};border-radius:6px;"
+                    f"margin-bottom:4px'>"
+                    f"{status} {p['text']}</div>",
+                    unsafe_allow_html=True,
+                )
+                btn_cols = st.columns(2)
+                with btn_cols[0]:
                     if p["active"]:
-                        if st.button("⏸️", key=f"pause_{p['id']}",
-                                     help="Pause this preference"):
+                        if st.button("⏸️ Pause", key=f"pause_{p['id']}",
+                                     use_container_width=True):
                             toggle_preference(p["id"], False)
                             st.rerun()
                     else:
-                        if st.button("▶️", key=f"resume_{p['id']}",
-                                     help="Re-enable this preference"):
+                        if st.button("▶️ Enable", key=f"resume_{p['id']}",
+                                     use_container_width=True):
                             toggle_preference(p["id"], True)
                             st.rerun()
-                with cols[2]:
-                    if st.button("🗑️", key=f"del_{p['id']}",
-                                 help="Delete this preference"):
+                with btn_cols[1]:
+                    if st.button("🗑️ Delete", key=f"del_{p['id']}",
+                                 use_container_width=True):
                         delete_preference(p["id"])
                         st.rerun()
         else:
@@ -263,7 +268,6 @@ def render_sidebar():
             "Add a preference",
             placeholder="e.g. Always show data as tables",
             key="new_pref_input",
-            label_visibility="collapsed",
         )
         if st.button("💾 Save preference", use_container_width=True,
                      disabled=not new_pref):
